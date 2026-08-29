@@ -1,6 +1,7 @@
 import ast
 import json
 import sys
+import tomllib
 from argparse import Namespace
 from pathlib import Path
 
@@ -68,6 +69,18 @@ def test_top_level_modules_are_explicitly_reexported_for_auto_import() -> None:
     for module_name in ("channel", "idl", "robot"):
         assert f"from . import {module_name} as {module_name}" in root_stub
     assert '__all__ = ["channel", "idl", "robot", "OsHelper"]' in root_stub
+
+
+def test_stub_distribution_ships_pylance_indexing_placeholder() -> None:
+    configuration = tomllib.loads(
+        (ROOT / "stubs" / "pyproject.toml").read_text(encoding="utf-8")
+    )
+    assert configuration["tool"]["setuptools"]["py-modules"] == [
+        "unitree_sdk2_cpp"
+    ]
+
+    placeholder = STUB_ROOT / "unitree_sdk2_cpp.py"
+    ast.parse(placeholder.read_text(encoding="utf-8"), filename=str(placeholder))
 
 
 def test_manifest_exposes_motion_signatures_without_executing_them() -> None:

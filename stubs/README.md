@@ -3,9 +3,23 @@
 Install the wheel to enable completion and static type checking for
 `unitree_sdk2_cpp` before the Linux binary extension is available.
 
+From a repository checkout, install the stub project into the same environment
+selected by the editor:
+
 ```bash
-python -m pip install unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+python -m pip install ./stubs
 ```
+
+Editable installs are also supported:
+
+```bash
+python -m pip install -e ./stubs
+```
+
+The package includes a design-time placeholder module so Pylance can index
+`channel`, `idl`, `robot`, and their public symbols for automatic imports. On a
+supported Linux system, the compiled extension takes precedence over that
+placeholder at runtime.
 
 `AVAILABLE` signatures exist in the current binding source. `SIGNATURE_ONLY`
 signatures are design-time previews and do not provide a runtime implementation.
