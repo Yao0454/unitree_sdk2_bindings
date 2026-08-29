@@ -10,16 +10,43 @@ selected by the editor:
 python -m pip install ./stubs
 ```
 
-Editable installs are also supported:
+The checked-in `.pyi` tree uses the importable `unitree_sdk2_cpp/` directory
+name. This is required by Zed's BasedPyright indexer; the conventional
+`unitree_sdk2_cpp-stubs/` directory resolves explicit imports but is skipped
+when BasedPyright builds third-party automatic-import candidates.
 
-```bash
-python -m pip install -e ./stubs
+BasedPyright intentionally does not build automatic-import candidates from this
+compiled extension's ordinary `site-packages` entry. To make Zed suggest, for
+example, `from unitree_sdk2_cpp import channel` when you type `chan`, add the
+checked-out stub source directory to the consuming project's
+`pyrightconfig.json`:
+
+```json
+{
+  "autoImportCompletions": true,
+  "indexing": true,
+  "include": [
+    ".",
+    "../unitree_sdk2/unitree_sdk2_bindings/stubs/src"
+  ],
+  "extraPaths": [
+    "../unitree_sdk2/unitree_sdk2_bindings/stubs/src"
+  ]
+}
 ```
 
-The package includes a design-time placeholder module so Pylance can index
-`channel`, `idl`, `robot`, and their public symbols for automatic imports. On a
-supported Linux system, the compiled extension takes precedence over that
-placeholder at runtime.
+`include` tells BasedPyright to index the declarations as automatic-import
+candidates; `extraPaths` makes their module paths resolve as
+`unitree_sdk2_cpp...`. Both entries are required. Adjust the relative path if
+the application and SDK repositories are not siblings, then restart Zed's
+BasedPyright language server. The path works for the sibling layouts
+`/Users/feng/G1Agent` and `/home/qwq/G1Agent` used by this project.
+
+Reinstall the package after changing the generated stubs:
+
+```bash
+python -m pip install --force-reinstall ./stubs
+```
 
 `AVAILABLE` signatures exist in the current binding source. `SIGNATURE_ONLY`
 signatures are design-time previews and do not provide a runtime implementation.

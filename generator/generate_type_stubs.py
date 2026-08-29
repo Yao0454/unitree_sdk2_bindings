@@ -600,7 +600,7 @@ def generate(arguments: argparse.Namespace) -> dict[str, Any]:
     ]
 
     output = arguments.output
-    package = output / "unitree_sdk2_cpp-stubs"
+    package = output / "unitree_sdk2_cpp"
     idl_python_names = {
         item["qualified_name"]: item["python_name"]
         for report in idl_reports

@@ -160,8 +160,9 @@ python -m pip install ./stubs
 It covers 64 IDL classes with 341 properties and 121 Robot classes with 634
 public methods or constructors, plus `OsHelper` and typed channels. Mypy and
 Pyright can therefore check code against `unitree_sdk2_cpp` on macOS, Windows,
-or Linux. A design-time placeholder lets Pylance index automatic imports such
-as `channel`; executing the API still requires the compiled Linux extension.
+or Linux. For Zed automatic imports, add `stubs/src` to BasedPyright's `include`
+and `extraPaths` as described in [the stub package guide](stubs/README.md).
+Executing the API still requires the compiled Linux extension.
 
 The packaged manifest contains 1213 entries: 1167 `AVAILABLE` and 46
 `SIGNATURE_ONLY`. G1 contributes five CRC overload entries and seven safety

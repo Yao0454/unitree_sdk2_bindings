@@ -4,17 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "unitree-sdk2-cpp-stubs"
-version = "0.3.1"
+version = "0.3.2"
 description = "PEP 561 signature-preview stubs for the Unitree SDK2 C++ bindings"
 requires-python = ">=3.10"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-py-modules = ["unitree_sdk2_cpp"]
 packages = [
-  "unitree_sdk2_cpp-stubs",
-  "unitree_sdk2_cpp-stubs.idl",
-  "unitree_sdk2_cpp-stubs.robot",
+  "unitree_sdk2_cpp",
+  "unitree_sdk2_cpp.idl",
+  "unitree_sdk2_cpp.robot",
 ]
 
 [tool.setuptools.package-data]

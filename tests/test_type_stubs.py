@@ -13,7 +13,7 @@ from generate_type_stubs import generate  # noqa: E402
 
 
 STUB_ROOT = ROOT / "stubs" / "src"
-PACKAGE_ROOT = STUB_ROOT / "unitree_sdk2_cpp-stubs"
+PACKAGE_ROOT = STUB_ROOT / "unitree_sdk2_cpp"
 
 
 def _arguments(output: Path) -> Namespace:
@@ -71,16 +71,19 @@ def test_top_level_modules_are_explicitly_reexported_for_auto_import() -> None:
     assert '__all__ = ["channel", "idl", "robot", "OsHelper"]' in root_stub
 
 
-def test_stub_distribution_ships_pylance_indexing_placeholder() -> None:
+def test_stub_distribution_uses_importable_package_layout() -> None:
     configuration = tomllib.loads(
         (ROOT / "stubs" / "pyproject.toml").read_text(encoding="utf-8")
     )
-    assert configuration["tool"]["setuptools"]["py-modules"] == [
-        "unitree_sdk2_cpp"
+    setuptools = configuration["tool"]["setuptools"]
+    assert "py-modules" not in setuptools
+    assert setuptools["packages"] == [
+        "unitree_sdk2_cpp",
+        "unitree_sdk2_cpp.idl",
+        "unitree_sdk2_cpp.robot",
     ]
-
-    placeholder = STUB_ROOT / "unitree_sdk2_cpp.py"
-    ast.parse(placeholder.read_text(encoding="utf-8"), filename=str(placeholder))
+    assert PACKAGE_ROOT.name.isidentifier()
+    assert not (STUB_ROOT / "unitree_sdk2_cpp.py").exists()
 
 
 def test_manifest_exposes_motion_signatures_without_executing_them() -> None:

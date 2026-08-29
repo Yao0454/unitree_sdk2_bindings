@@ -442,7 +442,7 @@ def select_manifest_entry(
 def parse_stubs(
     binding_root: Path,
 ) -> tuple[list[ModuleDoc], dict[str, Any], GenerationStats]:
-    stub_root = binding_root / "stubs" / "src" / "unitree_sdk2_cpp-stubs"
+    stub_root = binding_root / "stubs" / "src" / "unitree_sdk2_cpp"
     manifest = json.loads((stub_root / "api_manifest.json").read_text(encoding="utf-8"))
     manifest_by_path: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for entry in manifest["entries"]:
