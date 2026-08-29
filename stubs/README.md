@@ -25,6 +25,7 @@ checked-out stub source directory to the consuming project's
 {
   "autoImportCompletions": true,
   "indexing": true,
+  "reportMissingModuleSource": "none",
   "include": [
     ".",
     "../unitree_sdk2/unitree_sdk2_bindings/stubs/src"
@@ -37,10 +38,13 @@ checked-out stub source directory to the consuming project's
 
 `include` tells BasedPyright to index the declarations as automatic-import
 candidates; `extraPaths` makes their module paths resolve as
-`unitree_sdk2_cpp...`. Both entries are required. Adjust the relative path if
-the application and SDK repositories are not siblings, then restart Zed's
-BasedPyright language server. The path works for the sibling layouts
-`/Users/feng/G1Agent` and `/home/qwq/G1Agent` used by this project.
+`unitree_sdk2_cpp...`. Both entries are required. `reportMissingModuleSource` is
+disabled because `unitree_sdk2_cpp` is a compiled extension rather than a
+Python source package; its complete type surface is supplied by these `.pyi`
+files. Other missing-import and type diagnostics remain enabled. Adjust the
+relative path if the application and SDK repositories are not siblings, then
+restart Zed's BasedPyright language server. The path works for the sibling
+layouts `/Users/feng/G1Agent` and `/home/qwq/G1Agent` used by this project.
 
 Reinstall the package after changing the generated stubs:
 

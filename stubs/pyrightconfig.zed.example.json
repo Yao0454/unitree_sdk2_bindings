@@ -1,0 +1,12 @@
+{
+  "autoImportCompletions": true,
+  "indexing": true,
+  "reportMissingModuleSource": "none",
+  "include": [
+    ".",
+    "../unitree_sdk2/unitree_sdk2_bindings/stubs/src"
+  ],
+  "extraPaths": [
+    "../unitree_sdk2/unitree_sdk2_bindings/stubs/src"
+  ]
+}
