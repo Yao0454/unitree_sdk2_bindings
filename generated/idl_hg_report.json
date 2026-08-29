@@ -1,0 +1,181 @@
+{
+  "classes": [
+    {
+      "properties": [
+        "software_version",
+        "battery_percentage",
+        "current",
+        "temperature",
+        "docking_status",
+        "is_charging",
+        "is_dc_connected"
+      ],
+      "python_name": "AgvBmsState",
+      "qualified_name": "unitree_hg::msg::dds_::AgvBmsState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "cmd",
+        "reserve"
+      ],
+      "python_name": "BmsCmd",
+      "qualified_name": "unitree_hg::msg::dds_::BmsCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "version_high",
+        "version_low",
+        "fn",
+        "cell_vol",
+        "bmsvoltage",
+        "current",
+        "soc",
+        "soh",
+        "temperature",
+        "cycle",
+        "manufacturer_date",
+        "bmsstate",
+        "reserve"
+      ],
+      "python_name": "BmsState",
+      "qualified_name": "unitree_hg::msg::dds_::BmsState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "q",
+        "dq",
+        "tau",
+        "kp",
+        "kd",
+        "reserve"
+      ],
+      "python_name": "MotorCmd",
+      "qualified_name": "unitree_hg::msg::dds_::MotorCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "motor_cmd",
+        "reserve"
+      ],
+      "python_name": "HandCmd",
+      "qualified_name": "unitree_hg::msg::dds_::HandCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "quaternion",
+        "gyroscope",
+        "accelerometer",
+        "rpy",
+        "temperature"
+      ],
+      "python_name": "IMUState",
+      "qualified_name": "unitree_hg::msg::dds_::IMUState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "q",
+        "dq",
+        "ddq",
+        "tau_est",
+        "temperature",
+        "vol",
+        "sensor",
+        "motorstate",
+        "reserve"
+      ],
+      "python_name": "MotorState",
+      "qualified_name": "unitree_hg::msg::dds_::MotorState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "pressure",
+        "temperature",
+        "lost",
+        "reserve"
+      ],
+      "python_name": "PressSensorState",
+      "qualified_name": "unitree_hg::msg::dds_::PressSensorState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "motor_state",
+        "press_sensor_state",
+        "imu_state",
+        "power_v",
+        "power_a",
+        "system_v",
+        "device_v",
+        "error",
+        "reserve"
+      ],
+      "python_name": "HandState",
+      "qualified_name": "unitree_hg::msg::dds_::HandState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode_pr",
+        "mode_machine",
+        "motor_cmd",
+        "reserve",
+        "crc"
+      ],
+      "python_name": "LowCmd",
+      "qualified_name": "unitree_hg::msg::dds_::LowCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "version",
+        "mode_pr",
+        "mode_machine",
+        "tick",
+        "imu_state",
+        "motor_state",
+        "wireless_remote",
+        "reserve",
+        "crc"
+      ],
+      "python_name": "LowState",
+      "qualified_name": "unitree_hg::msg::dds_::LowState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "fan_state",
+        "temperature",
+        "value",
+        "state"
+      ],
+      "python_name": "MainBoardState",
+      "qualified_name": "unitree_hg::msg::dds_::MainBoardState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "fsm_id",
+        "fsm_mode",
+        "task_id",
+        "task_time"
+      ],
+      "python_name": "SportModeState",
+      "qualified_name": "unitree_hg::msg::dds_::SportModeState_",
+      "skipped_fields": []
+    }
+  ],
+  "function": "BindHgIdl",
+  "namespace_prefix": [
+    "unitree_hg::msg::dds_"
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,2981 @@
+{
+  "clients": [
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "TtsMaker",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "TtsMaker(const std::string &, int32_t)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: volume",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetVolume",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetVolume(uint8_t &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVolume",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetVolume(uint8_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStream",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStop",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStop(std::string)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LedControl",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "LedControl(uint8_t, uint8_t, uint8_t)"
+        }
+      ],
+      "qualified_name": "unitree::robot::a2::AudioClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandDown",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandDown()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RecoveryStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RecoveryStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Euler",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Euler(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BodyHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BodyHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SpeedLevel",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SpeedLevel(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BodyPosition",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BodyPosition(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LeftSideGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LeftSideGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RightSideGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RightSideGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HandStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HandStand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BipedStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BipedStand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BackFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BackFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ResetEstimator",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ResetEstimator()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Trajectory",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Trajectory(const std::vector<PathPoint> &, int, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetAutoRecovery",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetAutoRecovery(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: state_map",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetState",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetState(std::map<std::string, std::string> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::a2::SportClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandDown",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandDown()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RecoveryStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RecoveryStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Euler",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Euler(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BodyHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BodyHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SpeedLevel",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SpeedLevel(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BodyPosition",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BodyPosition(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LeftSideGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LeftSideGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RightSideGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RightSideGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HandStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HandStand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BipedStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BipedStand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BackFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BackFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Greeting",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Greeting()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Heart",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Heart()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Content",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Content()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Dance1",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Dance1()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Dance2",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Dance2()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Handshake",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Handshake()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Stretch",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Stretch()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Sit",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Sit(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontJump",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontJump()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PushUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "PushUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "UpJump",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "UpJump()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetAutoRecovery",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetAutoRecovery(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchJoystick",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchJoystick(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: state_map",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetState",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetState(std::map<std::string, std::string> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::as2::SportClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetImageSample",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetImageSample(std::vector<uint8_t> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::BackVideoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Set",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Set(const std::string &, const std::string &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: content",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Get",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "Get(const std::string &, std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Del",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Del(const std::string &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: meta",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Meta",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Meta(const std::string &, unitree::robot::b2::ConfigMeta &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: meta",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Meta",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Meta(const std::string &, std::string &)"
+        },
+        {
+          "binding_reason": "callback lifetime and GIL handling are required",
+          "binding_strategy": "CALLBACK_MANUAL",
+          "name": "SubscribeChangeStatus",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "installs a live DDS callback",
+          "signature": "SubscribeChangeStatus(const std::string &, const unitree::robot::b2::ConfigChangeStatusCallback &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::ConfigClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetImageSample",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetImageSample(std::vector<uint8_t> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::FrontVideoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: form, name",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "CheckMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "CheckMode(std::string &, std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SelectMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "changes the active robot motion service or mode",
+          "signature": "SelectMode(const std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ReleaseMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "changes the active robot motion service or mode",
+          "signature": "ReleaseMode()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSilent",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "changes the active robot motion service or mode",
+          "signature": "SetSilent(bool)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: silent",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetSilent",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetSilent(bool &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::MotionSwitcherClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: serviceStateList",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "ServiceList",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "ServiceList(std::vector<ServiceState> &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: status",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "ServiceSwitch",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "ServiceSwitch(const std::string &, int32_t, int32_t &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetReportFreq",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetReportFreq(int32_t, int32_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LowPowerSwitch",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "LowPowerSwitch(int32_t)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: status",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "LowPowerStatus",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "LowPowerStatus(int32_t &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: packageVersion, moduleVersionMap",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetPkgVersion",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetPkgVersion(std::string &, std::map<std::string, std::string> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::RobotStateClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandDown",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandDown()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RecoveryStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RecoveryStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchGait(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BodyHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BodyHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SpeedLevel",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SpeedLevel(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: path",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "TrajectoryFollow",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "TrajectoryFollow(std::vector<unitree::robot::b2::PathPoint> &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ContinuousGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ContinuousGait(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "MoveToPos",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "MoveToPos(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchMoveMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchMoveMode(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "VisionWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "VisionWalk(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HandStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HandStand(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "AutoRecoverySet",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "AutoRecoverySet(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeWalk()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ClassicWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ClassicWalk(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FastWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FastWalk(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Euler",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Euler(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeHeight(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "GaitHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "GaitHeight(bool)"
+        }
+      ],
+      "qualified_name": "unitree::robot::b2::SportClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WaitLeaseApplied",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "WaitLeaseApplied()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "GetLeaseId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetLeaseId()"
+        },
+        {
+          "binding_reason": "reference return needs an explicit lifetime policy",
+          "binding_strategy": "REFERENCE_POLICY",
+          "name": "GetApiVersion",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetApiVersion() const"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "GetServerApiVersion",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetServerApiVersion()"
+        }
+      ],
+      "qualified_name": "unitree::robot::Client",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTimeout",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "SetTimeout(int64_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTimeout",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "SetTimeout(float)"
+        }
+      ],
+      "qualified_name": "unitree::robot::ClientBase",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init(const std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Send",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Send(const unitree::robot::Request &, int64_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SendRequest",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SendRequest(const unitree::robot::Request &, int64_t)"
+        }
+      ],
+      "qualified_name": "unitree::robot::ClientStub",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WaitApplied",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "WaitApplied()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "GetId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetId()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Applied",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "Applied()"
+        }
+      ],
+      "qualified_name": "unitree::robot::LeaseClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HeightAdjust",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HeightAdjust(float)"
+        }
+      ],
+      "qualified_name": "unitree::robot::g1::AgvClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ExecuteAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ExecuteAction(int32_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ExecuteAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ExecuteAction(const std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopCustomAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopCustomAction()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: data",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetActionList",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetActionList(std::string &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::g1::G1ArmActionClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "TtsMaker",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "TtsMaker(const std::string &, int32_t)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: volume",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetVolume",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetVolume(uint8_t &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVolume",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetVolume(uint8_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStream",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStop",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStop(std::string)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LedControl",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "LedControl(uint8_t, uint8_t, uint8_t)"
+        }
+      ],
+      "qualified_name": "unitree::robot::g1::AudioClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_id",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmId(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: balance_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetBalanceMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetBalanceMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: swing_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetSwingHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetSwingHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: stand_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetStandHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetStandHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: phase",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetPhase",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetPhase(std::vector<float> &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetFsmId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetFsmId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetBalanceMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetBalanceMode(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSwingHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSwingHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetStandHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetStandHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVelocity",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetVelocity(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTaskId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetTaskId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchToUserCtrl",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchToUserCtrl()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchToInternalCtrl",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchToInternalCtrl(unitree::robot::g1::InternalFsmMode)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Start",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Start()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Squat",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Squat()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Sit",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Sit()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ZeroTorque",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ZeroTorque()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HighStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HighStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LowStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LowStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float, bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ContinuousGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ContinuousGait(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchMoveMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchMoveMode(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WaveHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "WaveHand(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ShakeHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ShakeHand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSpeedMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSpeedMode(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: data",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetMimicMotion",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetMimicMotion(std::string &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: data",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "_fsm_api",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "_fsm_api(std::string, std::string &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::g1::LocoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Set",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Set(const std::string &, const std::string &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: content",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Get",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "Get(const std::string &, std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Del",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Del(const std::string &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: meta",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Meta",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Meta(const std::string &, unitree::robot::go2::ConfigMeta &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: meta",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "Meta",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "Meta(const std::string &, std::string &)"
+        },
+        {
+          "binding_reason": "callback lifetime and GIL handling are required",
+          "binding_strategy": "CALLBACK_MANUAL",
+          "name": "SubscribeChangeStatus",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "installs a live DDS callback",
+          "signature": "SubscribeChangeStatus(const std::string &, const unitree::robot::go2::ConfigChangeStatusCallback &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::ConfigClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchSet",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchSet(bool)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: enable",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "SwitchGet",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchGet(bool &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "UseRemoteCommandFromApi",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "UseRemoteCommandFromApi(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "MoveToAbsolutePosition",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "MoveToAbsolutePosition(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "MoveToIncrementPosition",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "MoveToIncrementPosition(float, float, float)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: serviceStateList",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "ServiceList",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "ServiceList(std::vector<ServiceState> &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: status",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "ServiceSwitch",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "ServiceSwitch(const std::string &, int32_t, int32_t &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetReportFreq",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetReportFreq(int32_t, int32_t)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::RobotStateClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandDown",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandDown()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RecoveryStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RecoveryStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Euler",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Euler(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Sit",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Sit()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "RiseSit",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "RiseSit()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SpeedLevel",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SpeedLevel(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Hello",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Hello()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Stretch",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Stretch()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchJoystick",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchJoystick(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Content",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Content()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Heart",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Heart()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Pose",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Pose(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Scrape",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Scrape()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontJump",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontJump()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FrontPounce",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FrontPounce()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Dance1",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Dance1()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Dance2",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Dance2()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LeftFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LeftFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BackFlip",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BackFlip()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HandStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HandStand(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeWalk()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeBound",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeBound(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeJump",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeJump(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "FreeAvoid",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "FreeAvoid(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ClassicWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ClassicWalk(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WalkUpright",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "WalkUpright(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "CrossStep",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "CrossStep(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "AutoRecoverSet",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "AutoRecoverSet(bool)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: flag",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "AutoRecoverGet",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "AutoRecoverGet(bool &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StaticWalk",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StaticWalk()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "TrotRun",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "TrotRun()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "EconomicGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "EconomicGait()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchAvoidMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchAvoidMode()"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::SportClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchSet",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SwitchSet(bool)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: enable",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "SwitchGet",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SwitchGet(bool &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: enable",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "IsTracking",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "IsTracking(bool &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::UtrackClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetImageSample",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetImageSample(std::vector<uint8_t> &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::VideoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSwitch",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetSwitch(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetSwitch",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetSwitch(int &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVolume",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetVolume(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetVolume",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetVolume(int &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetBrightness",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetBrightness(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arg0",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetBrightness",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetBrightness(int &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::go2::VuiClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_id",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmId(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: balance_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetBalanceMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetBalanceMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: swing_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetSwingHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetSwingHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: stand_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetStandHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetStandHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: phase",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetPhase",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetPhase(std::vector<float> &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "EnableOdom",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "EnableOdom()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "DisableOdom",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "DisableOdom()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: x, y, yaw",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetOdom",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetOdom(float &, float &, float &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetFsmId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetFsmId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetBalanceMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetBalanceMode(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSwingHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSwingHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetStandHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetStandHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVelocity",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetVelocity(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetPhase",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetPhase(std::vector<float>)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTargetPos",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetTargetPos(float, float, float, bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTaskId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetTaskId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Start",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Start()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ZeroTorque",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ZeroTorque()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HighStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HighStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LowStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LowStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float, bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ContinuousGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ContinuousGait(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchMoveMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchMoveMode(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetNextFoot",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetNextFoot(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WaveHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "WaveHand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ShakeHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ShakeHand(int)"
+        }
+      ],
+      "qualified_name": "unitree::robot::h1::LocoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ExecuteAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ExecuteAction(int32_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ExecuteAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ExecuteAction(const std::string &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopCustomAction",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopCustomAction()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: data",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetActionList",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetActionList(std::string &)"
+        }
+      ],
+      "qualified_name": "unitree::robot::h2::H2ArmActionClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_id",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmId(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: balance_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetBalanceMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetBalanceMode(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: swing_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetSwingHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetSwingHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: stand_height",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetStandHeight",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetStandHeight(float &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: phase",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetPhase",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetPhase(std::vector<float> &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: arm_sdk_status",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetArmSdkStatus",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetArmSdkStatus(bool &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: ids, names",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetAvailableFsmIds",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetAvailableFsmIds(std::vector<int> &, std::vector<std::string> &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetFsmId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetFsmId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetBalanceMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetBalanceMode(int)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: punch_api",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "SetPunchApi",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetPunchApi(std::vector<float> &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSwingHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSwingHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetStandHeight",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetStandHeight(float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVelocity",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetVelocity(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetTaskId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetTaskId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetArmSdkStatus",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetArmSdkStatus(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Start",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Start()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Squat",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Squat()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Sit",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Sit()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ZeroTorque",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ZeroTorque()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "HighStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "HighStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LowStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "LowStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float, bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "BalanceStand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "BalanceStand()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ContinuousGait",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ContinuousGait(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchMoveMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchMoveMode(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "WaveHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "WaveHand(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ShakeHand",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ShakeHand(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSpeedMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSpeedMode(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "EnableArmSDK",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "EnableArmSDK()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "DisableArmSDK",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "DisableArmSDK()"
+        }
+      ],
+      "qualified_name": "unitree::robot::h2::LocoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "TtsMaker",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "TtsMaker(const std::string &, int32_t)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: volume",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetVolume",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetVolume(uint8_t &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVolume",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "SetVolume(uint8_t)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStream",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "PlayStop",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "PlayStop(std::string)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "LedControl",
+          "safety": "HARDWARE_SIDE_EFFECT",
+          "safety_reason": "changes robot or service state",
+          "signature": "LedControl(uint8_t, uint8_t, uint8_t)"
+        }
+      ],
+      "qualified_name": "unitree::robot::r1::AudioClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    },
+    {
+      "binding_status": "MANUAL",
+      "methods": [
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Init",
+          "safety": "INITIALIZATION",
+          "safety_reason": "creates or configures client-side SDK state",
+          "signature": "Init()"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_id",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmId",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmId(int &)"
+        },
+        {
+          "binding_reason": "mutable C++ outputs should be returned as Python values: fsm_mode",
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "name": "GetFsmMode",
+          "safety": "READ_ONLY",
+          "safety_reason": "queries state without an intended command side effect",
+          "signature": "GetFsmMode(int &)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetFsmId",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetFsmId(int)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetVelocity",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetVelocity(float, float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Damp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Damp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Start",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Start()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StandUp",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StandUp()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "ZeroTorque",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "ZeroTorque()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "StopMove",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "StopMove()"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float, bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "Move",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "Move(float, float, float)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SwitchMoveMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SwitchMoveMode(bool)"
+        },
+        {
+          "binding_reason": "arguments and return value have direct pybind11 conversions",
+          "binding_strategy": "DIRECT",
+          "name": "SetSpeedMode",
+          "safety": "MOTION_COMMAND",
+          "safety_reason": "may change robot posture, gait, arm, or velocity",
+          "signature": "SetSpeedMode(int)"
+        }
+      ],
+      "qualified_name": "unitree::robot::r1::LocoClient",
+      "reason": "RPC/DDS lifetime and hardware risk require an explicit binding policy"
+    }
+  ],
+  "diagnostics": [
+    {
+      "declaration": "unitree::robot::ChannelLabor",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/channel/channel_labor.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::ChannelLabor at line 17"
+    },
+    {
+      "declaration": "unitree::robot::ClientChannelLabor",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/channel/channel_labor.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::ClientChannelLabor at line 61"
+    },
+    {
+      "declaration": "unitree::robot::ServerChannelLabor",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/channel/channel_labor.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::ServerChannelLabor at line 81"
+    },
+    {
+      "declaration": "unitree::robot::ChannelPublisher",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/channel/channel_publisher.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::ChannelPublisher at line 11"
+    },
+    {
+      "declaration": "unitree::robot::ChannelSubscriber",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/channel/channel_subscriber.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::ChannelSubscriber at line 11"
+    },
+    {
+      "declaration": "unitree::robot::RequestFutureQueue",
+      "header": "/Users/feng/unitree_sdk2/include/unitree/robot/future/request_future.hpp",
+      "message": "Clang AST did not contain the expected CXXRecordDecl for unitree::robot::RequestFutureQueue at line 11"
+    }
+  ],
+  "schema_version": 1,
+  "source": "generated/robot_inventory.json",
+  "summary": {
+    "binding_strategy": {
+      "CALLBACK_MANUAL": 2,
+      "DIRECT": 279,
+      "OUTPUT_WRAPPER": 58,
+      "REFERENCE_POLICY": 1
+    },
+    "classes": 129,
+    "client_classes": 29,
+    "client_methods": 340,
+    "diagnostics": 6,
+    "enums": 1,
+    "headers": 103,
+    "safety": {
+      "HARDWARE_SIDE_EFFECT": 38,
+      "INITIALIZATION": 32,
+      "MOTION_COMMAND": 220,
+      "READ_ONLY": 50
+    }
+  }
+}

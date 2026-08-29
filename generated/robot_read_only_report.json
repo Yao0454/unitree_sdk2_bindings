@@ -1,0 +1,4248 @@
+{
+  "classes": [
+    {
+      "constructors": [
+        "LeaseClient(const std::string &)"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "WaitApplied()",
+          "python_name": "wait_applied",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetId()",
+          "python_name": "get_id",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Applied()",
+          "python_name": "applied",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot",
+      "python_name": "LeaseClient",
+      "qualified_name": "unitree::robot::LeaseClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "AudioClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "TtsMaker(const std::string &, int32_t)",
+          "python_name": "tts_maker",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetVolume(uint8_t &)",
+          "python_name": "get_volume",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVolume(uint8_t)",
+          "python_name": "set_volume",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)",
+          "python_name": "play_stream",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStop(std::string)",
+          "python_name": "play_stop",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LedControl(uint8_t, uint8_t, uint8_t)",
+          "python_name": "led_control",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "AudioClient",
+      "qualified_name": "unitree::robot::a2::AudioClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "SportClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandDown()",
+          "python_name": "stand_down",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RecoveryStand()",
+          "python_name": "recovery_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Euler(float, float, float)",
+          "python_name": "euler",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchGait(int)",
+          "python_name": "switch_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BodyHeight(float)",
+          "python_name": "body_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SpeedLevel(int)",
+          "python_name": "speed_level",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BodyPosition(float, float, float, float)",
+          "python_name": "body_position",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LeftSideGait(int)",
+          "python_name": "left_side_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RightSideGait(int)",
+          "python_name": "right_side_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HandStand(int)",
+          "python_name": "hand_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BipedStand(int)",
+          "python_name": "biped_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontFlip()",
+          "python_name": "front_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BackFlip()",
+          "python_name": "back_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ResetEstimator()",
+          "python_name": "reset_estimator",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Trajectory(const std::vector<PathPoint> &, int, float, float, float)",
+          "python_name": "trajectory",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetAutoRecovery(int)",
+          "python_name": "set_auto_recovery",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetState(std::map<std::string, std::string> &)",
+          "python_name": "get_state",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "SportClient",
+      "qualified_name": "unitree::robot::a2::SportClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "SportClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandDown()",
+          "python_name": "stand_down",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RecoveryStand()",
+          "python_name": "recovery_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Euler(float, float, float)",
+          "python_name": "euler",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchGait(int)",
+          "python_name": "switch_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BodyHeight(float)",
+          "python_name": "body_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SpeedLevel(int)",
+          "python_name": "speed_level",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BodyPosition(float, float, float, float)",
+          "python_name": "body_position",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LeftSideGait(int)",
+          "python_name": "left_side_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RightSideGait(int)",
+          "python_name": "right_side_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HandStand(int)",
+          "python_name": "hand_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BipedStand(int)",
+          "python_name": "biped_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontFlip()",
+          "python_name": "front_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BackFlip()",
+          "python_name": "back_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Greeting()",
+          "python_name": "greeting",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Heart()",
+          "python_name": "heart",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Content()",
+          "python_name": "content",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Dance1()",
+          "python_name": "dance1",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Dance2()",
+          "python_name": "dance2",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Handshake()",
+          "python_name": "handshake",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Stretch()",
+          "python_name": "stretch",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Sit(int)",
+          "python_name": "sit",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontJump()",
+          "python_name": "front_jump",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PushUp()",
+          "python_name": "push_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "UpJump()",
+          "python_name": "up_jump",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetAutoRecovery(int)",
+          "python_name": "set_auto_recovery",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchJoystick(int)",
+          "python_name": "switch_joystick",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetState(std::map<std::string, std::string> &)",
+          "python_name": "get_state",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.as2",
+      "python_name": "SportClient",
+      "qualified_name": "unitree::robot::as2::SportClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "BackVideoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetImageSample(std::vector<uint8_t> &)",
+          "python_name": "get_image_sample",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "BackVideoClient",
+      "qualified_name": "unitree::robot::b2::BackVideoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "ConfigClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Set(const std::string &, const std::string &)",
+          "python_name": "set",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Get(const std::string &, std::string &)",
+          "python_name": "get",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Del(const std::string &)",
+          "python_name": "del_",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Meta(const std::string &, unitree::robot::b2::ConfigMeta &)",
+          "python_name": "meta_config_meta",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Meta(const std::string &, std::string &)",
+          "python_name": "meta_string",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "CALLBACK_MANUAL",
+          "cpp_signature": "SubscribeChangeStatus(const std::string &, const unitree::robot::b2::ConfigChangeStatusCallback &)",
+          "python_name": "subscribe_change_status",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigClient",
+      "qualified_name": "unitree::robot::b2::ConfigClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "FrontVideoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetImageSample(std::vector<uint8_t> &)",
+          "python_name": "get_image_sample",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "FrontVideoClient",
+      "qualified_name": "unitree::robot::b2::FrontVideoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "MotionSwitcherClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "CheckMode(std::string &, std::string &)",
+          "python_name": "check_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SelectMode(const std::string &)",
+          "python_name": "select_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ReleaseMode()",
+          "python_name": "release_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSilent(bool)",
+          "python_name": "set_silent",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetSilent(bool &)",
+          "python_name": "get_silent",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "MotionSwitcherClient",
+      "qualified_name": "unitree::robot::b2::MotionSwitcherClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "RobotStateClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "ServiceList(std::vector<ServiceState> &)",
+          "python_name": "service_list",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "ServiceSwitch(const std::string &, int32_t, int32_t &)",
+          "python_name": "service_switch",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetReportFreq(int32_t, int32_t)",
+          "python_name": "set_report_freq",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LowPowerSwitch(int32_t)",
+          "python_name": "low_power_switch",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "LowPowerStatus(int32_t &)",
+          "python_name": "low_power_status",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetPkgVersion(std::string &, std::map<std::string, std::string> &)",
+          "python_name": "get_pkg_version",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "RobotStateClient",
+      "qualified_name": "unitree::robot::b2::RobotStateClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "SportClient(bool)"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandDown()",
+          "python_name": "stand_down",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RecoveryStand()",
+          "python_name": "recovery_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchGait(int)",
+          "python_name": "switch_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BodyHeight(float)",
+          "python_name": "body_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SpeedLevel(int)",
+          "python_name": "speed_level",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "MUTABLE_INPUT_COPY",
+          "cpp_signature": "TrajectoryFollow(std::vector<unitree::robot::b2::PathPoint> &)",
+          "python_name": "trajectory_follow",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ContinuousGait(bool)",
+          "python_name": "continuous_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "MoveToPos(float, float, float)",
+          "python_name": "move_to_pos",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchMoveMode(bool)",
+          "python_name": "switch_move_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "VisionWalk(bool)",
+          "python_name": "vision_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HandStand(bool)",
+          "python_name": "hand_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "AutoRecoverySet(bool)",
+          "python_name": "auto_recovery_set",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeWalk()",
+          "python_name": "free_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ClassicWalk(bool)",
+          "python_name": "classic_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FastWalk(bool)",
+          "python_name": "fast_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Euler(float, float, float)",
+          "python_name": "euler",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeHeight(bool)",
+          "python_name": "free_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GaitHeight(bool)",
+          "python_name": "gait_height",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "SportClient",
+      "qualified_name": "unitree::robot::b2::SportClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "AgvClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HeightAdjust(float)",
+          "python_name": "height_adjust",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "AgvClient",
+      "qualified_name": "unitree::robot::g1::AgvClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "AudioClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "TtsMaker(const std::string &, int32_t)",
+          "python_name": "tts_maker",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetVolume(uint8_t &)",
+          "python_name": "get_volume",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVolume(uint8_t)",
+          "python_name": "set_volume",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)",
+          "python_name": "play_stream",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStop(std::string)",
+          "python_name": "play_stop",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LedControl(uint8_t, uint8_t, uint8_t)",
+          "python_name": "led_control",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "AudioClient",
+      "qualified_name": "unitree::robot::g1::AudioClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "G1ArmActionClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ExecuteAction(int32_t)",
+          "python_name": "execute_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ExecuteAction(const std::string &)",
+          "python_name": "execute_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopCustomAction()",
+          "python_name": "stop_custom_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetActionList(std::string &)",
+          "python_name": "get_action_list",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "G1ArmActionClient",
+      "qualified_name": "unitree::robot::g1::G1ArmActionClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "LocoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmId(int &)",
+          "python_name": "get_fsm_id",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmMode(int &)",
+          "python_name": "get_fsm_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetBalanceMode(int &)",
+          "python_name": "get_balance_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetSwingHeight(float &)",
+          "python_name": "get_swing_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetStandHeight(float &)",
+          "python_name": "get_stand_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetPhase(std::vector<float> &)",
+          "python_name": "get_phase",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetFsmId(int)",
+          "python_name": "set_fsm_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetBalanceMode(int)",
+          "python_name": "set_balance_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSwingHeight(float)",
+          "python_name": "set_swing_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetStandHeight(float)",
+          "python_name": "set_stand_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVelocity(float, float, float, float)",
+          "python_name": "set_velocity",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetTaskId(int)",
+          "python_name": "set_task_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchToUserCtrl()",
+          "python_name": "switch_to_user_ctrl",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchToInternalCtrl(unitree::robot::g1::InternalFsmMode)",
+          "python_name": "switch_to_internal_ctrl",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Start()",
+          "python_name": "start",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Squat()",
+          "python_name": "squat",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Sit()",
+          "python_name": "sit",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ZeroTorque()",
+          "python_name": "zero_torque",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HighStand()",
+          "python_name": "high_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LowStand()",
+          "python_name": "low_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float, bool)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ContinuousGait(bool)",
+          "python_name": "continuous_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchMoveMode(bool)",
+          "python_name": "switch_move_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "WaveHand(bool)",
+          "python_name": "wave_hand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ShakeHand(int)",
+          "python_name": "shake_hand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSpeedMode(int)",
+          "python_name": "set_speed_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetMimicMotion(std::string &)",
+          "python_name": "get_mimic_motion",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "_fsm_api(std::string, std::string &)",
+          "python_name": "_fsm_api",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "LocoClient",
+      "qualified_name": "unitree::robot::g1::LocoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "ConfigClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Set(const std::string &, const std::string &)",
+          "python_name": "set",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Get(const std::string &, std::string &)",
+          "python_name": "get",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Del(const std::string &)",
+          "python_name": "del_",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Meta(const std::string &, unitree::robot::go2::ConfigMeta &)",
+          "python_name": "meta_config_meta",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "Meta(const std::string &, std::string &)",
+          "python_name": "meta_string",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "CALLBACK_MANUAL",
+          "cpp_signature": "SubscribeChangeStatus(const std::string &, const unitree::robot::go2::ConfigChangeStatusCallback &)",
+          "python_name": "subscribe_change_status",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigClient",
+      "qualified_name": "unitree::robot::go2::ConfigClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "ObstaclesAvoidClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchSet(bool)",
+          "python_name": "switch_set",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "SwitchGet(bool &)",
+          "python_name": "switch_get",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "UseRemoteCommandFromApi(bool)",
+          "python_name": "use_remote_command_from_api",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "MoveToAbsolutePosition(float, float, float)",
+          "python_name": "move_to_absolute_position",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "MoveToIncrementPosition(float, float, float)",
+          "python_name": "move_to_increment_position",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ObstaclesAvoidClient",
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "RobotStateClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "ServiceList(std::vector<ServiceState> &)",
+          "python_name": "service_list",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "ServiceSwitch(const std::string &, int32_t, int32_t &)",
+          "python_name": "service_switch",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetReportFreq(int32_t, int32_t)",
+          "python_name": "set_report_freq",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "RobotStateClient",
+      "qualified_name": "unitree::robot::go2::RobotStateClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "SportClient(bool)"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandDown()",
+          "python_name": "stand_down",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RecoveryStand()",
+          "python_name": "recovery_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Euler(float, float, float)",
+          "python_name": "euler",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Sit()",
+          "python_name": "sit",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "RiseSit()",
+          "python_name": "rise_sit",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SpeedLevel(int)",
+          "python_name": "speed_level",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Hello()",
+          "python_name": "hello",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Stretch()",
+          "python_name": "stretch",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchJoystick(bool)",
+          "python_name": "switch_joystick",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Content()",
+          "python_name": "content",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Heart()",
+          "python_name": "heart",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Pose(bool)",
+          "python_name": "pose",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Scrape()",
+          "python_name": "scrape",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontFlip()",
+          "python_name": "front_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontJump()",
+          "python_name": "front_jump",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FrontPounce()",
+          "python_name": "front_pounce",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Dance1()",
+          "python_name": "dance1",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Dance2()",
+          "python_name": "dance2",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LeftFlip()",
+          "python_name": "left_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BackFlip()",
+          "python_name": "back_flip",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HandStand(bool)",
+          "python_name": "hand_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeWalk()",
+          "python_name": "free_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeBound(bool)",
+          "python_name": "free_bound",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeJump(bool)",
+          "python_name": "free_jump",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "FreeAvoid(bool)",
+          "python_name": "free_avoid",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ClassicWalk(bool)",
+          "python_name": "classic_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "WalkUpright(bool)",
+          "python_name": "walk_upright",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "CrossStep(bool)",
+          "python_name": "cross_step",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "AutoRecoverSet(bool)",
+          "python_name": "auto_recover_set",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "AutoRecoverGet(bool &)",
+          "python_name": "auto_recover_get",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StaticWalk()",
+          "python_name": "static_walk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "TrotRun()",
+          "python_name": "trot_run",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "EconomicGait()",
+          "python_name": "economic_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchAvoidMode()",
+          "python_name": "switch_avoid_mode",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "SportClient",
+      "qualified_name": "unitree::robot::go2::SportClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "UtrackClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchSet(bool)",
+          "python_name": "switch_set",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "SwitchGet(bool &)",
+          "python_name": "switch_get",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "IsTracking(bool &)",
+          "python_name": "is_tracking",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "UtrackClient",
+      "qualified_name": "unitree::robot::go2::UtrackClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "VideoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetImageSample(std::vector<uint8_t> &)",
+          "python_name": "get_image_sample",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "VideoClient",
+      "qualified_name": "unitree::robot::go2::VideoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "VuiClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSwitch(int)",
+          "python_name": "set_switch",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetSwitch(int &)",
+          "python_name": "get_switch",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVolume(int)",
+          "python_name": "set_volume",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetVolume(int &)",
+          "python_name": "get_volume",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetBrightness(int)",
+          "python_name": "set_brightness",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetBrightness(int &)",
+          "python_name": "get_brightness",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "VuiClient",
+      "qualified_name": "unitree::robot::go2::VuiClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "LocoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmId(int &)",
+          "python_name": "get_fsm_id",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmMode(int &)",
+          "python_name": "get_fsm_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetBalanceMode(int &)",
+          "python_name": "get_balance_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetSwingHeight(float &)",
+          "python_name": "get_swing_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetStandHeight(float &)",
+          "python_name": "get_stand_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetPhase(std::vector<float> &)",
+          "python_name": "get_phase",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "EnableOdom()",
+          "python_name": "enable_odom",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "DisableOdom()",
+          "python_name": "disable_odom",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetOdom(float &, float &, float &)",
+          "python_name": "get_odom",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetFsmId(int)",
+          "python_name": "set_fsm_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetBalanceMode(int)",
+          "python_name": "set_balance_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSwingHeight(float)",
+          "python_name": "set_swing_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetStandHeight(float)",
+          "python_name": "set_stand_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVelocity(float, float, float, float)",
+          "python_name": "set_velocity",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetPhase(std::vector<float>)",
+          "python_name": "set_phase",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetTargetPos(float, float, float, bool)",
+          "python_name": "set_target_pos",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetTaskId(int)",
+          "python_name": "set_task_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Start()",
+          "python_name": "start",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ZeroTorque()",
+          "python_name": "zero_torque",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HighStand()",
+          "python_name": "high_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LowStand()",
+          "python_name": "low_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float, bool)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ContinuousGait(bool)",
+          "python_name": "continuous_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchMoveMode(bool)",
+          "python_name": "switch_move_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetNextFoot(bool)",
+          "python_name": "set_next_foot",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "WaveHand()",
+          "python_name": "wave_hand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ShakeHand(int)",
+          "python_name": "shake_hand",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h1",
+      "python_name": "LocoClient",
+      "qualified_name": "unitree::robot::h1::LocoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "H2ArmActionClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ExecuteAction(int32_t)",
+          "python_name": "execute_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ExecuteAction(const std::string &)",
+          "python_name": "execute_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopCustomAction()",
+          "python_name": "stop_custom_action",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetActionList(std::string &)",
+          "python_name": "get_action_list",
+          "safety": "READ_ONLY"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "H2ArmActionClient",
+      "qualified_name": "unitree::robot::h2::H2ArmActionClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "LocoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmId(int &)",
+          "python_name": "get_fsm_id",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmMode(int &)",
+          "python_name": "get_fsm_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetBalanceMode(int &)",
+          "python_name": "get_balance_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetSwingHeight(float &)",
+          "python_name": "get_swing_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetStandHeight(float &)",
+          "python_name": "get_stand_height",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetPhase(std::vector<float> &)",
+          "python_name": "get_phase",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetArmSdkStatus(bool &)",
+          "python_name": "get_arm_sdk_status",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetAvailableFsmIds(std::vector<int> &, std::vector<std::string> &)",
+          "python_name": "get_available_fsm_ids",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetFsmId(int)",
+          "python_name": "set_fsm_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetBalanceMode(int)",
+          "python_name": "set_balance_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "MUTABLE_INPUT_COPY",
+          "cpp_signature": "SetPunchApi(std::vector<float> &)",
+          "python_name": "set_punch_api",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSwingHeight(float)",
+          "python_name": "set_swing_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetStandHeight(float)",
+          "python_name": "set_stand_height",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVelocity(float, float, float, float)",
+          "python_name": "set_velocity",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetTaskId(int)",
+          "python_name": "set_task_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetArmSdkStatus(bool)",
+          "python_name": "set_arm_sdk_status",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Start()",
+          "python_name": "start",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Squat()",
+          "python_name": "squat",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Sit()",
+          "python_name": "sit",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ZeroTorque()",
+          "python_name": "zero_torque",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "HighStand()",
+          "python_name": "high_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LowStand()",
+          "python_name": "low_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float, bool)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "BalanceStand()",
+          "python_name": "balance_stand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ContinuousGait(bool)",
+          "python_name": "continuous_gait",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchMoveMode(bool)",
+          "python_name": "switch_move_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "WaveHand(bool)",
+          "python_name": "wave_hand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ShakeHand(int)",
+          "python_name": "shake_hand",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSpeedMode(int)",
+          "python_name": "set_speed_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "EnableArmSDK()",
+          "python_name": "enable_arm_sdk",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "DisableArmSDK()",
+          "python_name": "disable_arm_sdk",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "LocoClient",
+      "qualified_name": "unitree::robot::h2::LocoClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "AudioClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "TtsMaker(const std::string &, int32_t)",
+          "python_name": "tts_maker",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetVolume(uint8_t &)",
+          "python_name": "get_volume",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVolume(uint8_t)",
+          "python_name": "set_volume",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStream(std::string, std::string, std::vector<uint8_t>)",
+          "python_name": "play_stream",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "PlayStop(std::string)",
+          "python_name": "play_stop",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "LedControl(uint8_t, uint8_t, uint8_t)",
+          "python_name": "led_control",
+          "safety": "HARDWARE_SIDE_EFFECT"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "AudioClient",
+      "qualified_name": "unitree::robot::r1::AudioClient",
+      "status": "AVAILABLE"
+    },
+    {
+      "constructors": [
+        "LocoClient()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Init()",
+          "python_name": "init",
+          "safety": "INITIALIZATION"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmId(int &)",
+          "python_name": "get_fsm_id",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "OUTPUT_WRAPPER",
+          "cpp_signature": "GetFsmMode(int &)",
+          "python_name": "get_fsm_mode",
+          "safety": "READ_ONLY"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetFsmId(int)",
+          "python_name": "set_fsm_id",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetVelocity(float, float, float, float)",
+          "python_name": "set_velocity",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Damp()",
+          "python_name": "damp",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Start()",
+          "python_name": "start",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StandUp()",
+          "python_name": "stand_up",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "ZeroTorque()",
+          "python_name": "zero_torque",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "StopMove()",
+          "python_name": "stop_move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float, bool)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Move(float, float, float)",
+          "python_name": "move",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SwitchMoveMode(bool)",
+          "python_name": "switch_move_mode",
+          "safety": "MOTION_COMMAND"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "SetSpeedMode(int)",
+          "python_name": "set_speed_mode",
+          "safety": "MOTION_COMMAND"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "LocoClient",
+      "qualified_name": "unitree::robot::r1::LocoClient",
+      "status": "AVAILABLE"
+    }
+  ],
+  "schema_version": 2,
+  "sources": [
+    "generated/robot_binding_report.json",
+    "generator/robot_read_only_policy.json"
+  ],
+  "summary": {
+    "client_classes": 26,
+    "client_methods": 336,
+    "enums": 1,
+    "hardware_side_effect_methods_exposed": 36,
+    "motion_methods_exposed": 220,
+    "read_only_methods": 50,
+    "unbound_methods": 5,
+    "utility_classes": 2,
+    "utility_methods": 11,
+    "value_classes": 80,
+    "value_methods": 144
+  },
+  "unbound_methods": [
+    {
+      "binding_reason": "arguments and return value have direct pybind11 conversions",
+      "binding_strategy": "DIRECT",
+      "name": "GetLeaseId",
+      "qualified_name": "unitree::robot::Client",
+      "safety": "READ_ONLY",
+      "safety_reason": "queries state without an intended command side effect",
+      "signature": "GetLeaseId()"
+    },
+    {
+      "binding_reason": "arguments and return value have direct pybind11 conversions",
+      "binding_strategy": "DIRECT",
+      "name": "Init",
+      "qualified_name": "unitree::robot::ClientBase",
+      "safety": "INITIALIZATION",
+      "safety_reason": "creates or configures client-side SDK state",
+      "signature": "Init()"
+    },
+    {
+      "binding_reason": "arguments and return value have direct pybind11 conversions",
+      "binding_strategy": "DIRECT",
+      "name": "Init",
+      "qualified_name": "unitree::robot::ClientStub",
+      "safety": "INITIALIZATION",
+      "safety_reason": "creates or configures client-side SDK state",
+      "signature": "Init(const std::string &)"
+    },
+    {
+      "binding_reason": "arguments and return value have direct pybind11 conversions",
+      "binding_strategy": "DIRECT",
+      "name": "Send",
+      "qualified_name": "unitree::robot::ClientStub",
+      "safety": "HARDWARE_SIDE_EFFECT",
+      "safety_reason": "changes robot or service state",
+      "signature": "Send(const unitree::robot::Request &, int64_t)"
+    },
+    {
+      "binding_reason": "arguments and return value have direct pybind11 conversions",
+      "binding_strategy": "DIRECT",
+      "name": "SendRequest",
+      "qualified_name": "unitree::robot::ClientStub",
+      "safety": "HARDWARE_SIDE_EFFECT",
+      "safety_reason": "changes robot or service state",
+      "signature": "SendRequest(const unitree::robot::Request &, int64_t)"
+    }
+  ],
+  "utility_classes": [
+    {
+      "constructors": [
+        "LeaseCache()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Clear()",
+          "python_name": "clear",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetId() const",
+          "python_name": "get_id",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetLastModified() const",
+          "python_name": "get_last_modified",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetName() const",
+          "python_name": "get_name",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Renewal(int64_t)",
+          "python_name": "renewal",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Set(int64_t, const std::string &, int64_t)",
+          "python_name": "set",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot",
+      "python_name": "LeaseCache",
+      "qualified_name": "unitree::robot::LeaseCache",
+      "status": "AVAILABLE_UTILITY"
+    },
+    {
+      "constructors": [
+        "LeaseContext()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetId() const",
+          "python_name": "get_id",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "GetTerm() const",
+          "python_name": "get_term",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Reset()",
+          "python_name": "reset",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Update(int64_t, int64_t)",
+          "python_name": "update",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "DIRECT",
+          "cpp_signature": "Valid() const",
+          "python_name": "valid",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot",
+      "python_name": "LeaseContext",
+      "qualified_name": "unitree::robot::LeaseContext",
+      "status": "AVAILABLE_UTILITY"
+    }
+  ],
+  "value_classes": [
+    {
+      "aliases": [],
+      "constructors": [
+        "ApplyLeaseData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot",
+      "python_name": "ApplyLeaseData",
+      "qualified_name": "unitree::robot::ApplyLeaseData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ApplyLeaseParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot",
+      "python_name": "ApplyLeaseParameter",
+      "qualified_name": "unitree::robot::ApplyLeaseParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "LedControlParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "LedControlParameter",
+      "qualified_name": "unitree::robot::a2::LedControlParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PathPoint()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "PathPoint",
+      "qualified_name": "unitree::robot::a2::PathPoint",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStopParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "PlayStopParameter",
+      "qualified_name": "unitree::robot::a2::PlayStopParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStreamParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "PlayStreamParameter",
+      "qualified_name": "unitree::robot::a2::PlayStreamParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PoseVec4()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "PoseVec4",
+      "qualified_name": "unitree::robot::a2::PoseVec4",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "TtsMakerParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.a2",
+      "python_name": "TtsMakerParameter",
+      "qualified_name": "unitree::robot::a2::TtsMakerParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PoseVec4()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.as2",
+      "python_name": "PoseVec4",
+      "qualified_name": "unitree::robot::as2::PoseVec4",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigDelParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigDelParameter",
+      "qualified_name": "unitree::robot::b2::ConfigDelParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigGetData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigGetData",
+      "qualified_name": "unitree::robot::b2::ConfigGetData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigGetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigGetParameter",
+      "qualified_name": "unitree::robot::b2::ConfigGetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMeta()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigMeta",
+      "qualified_name": "unitree::robot::b2::ConfigMeta",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMetaData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigMetaData",
+      "qualified_name": "unitree::robot::b2::ConfigMetaData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMetaParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigMetaParameter",
+      "qualified_name": "unitree::robot::b2::ConfigMetaParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigSetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ConfigSetParameter",
+      "qualified_name": "unitree::robot::b2::ConfigSetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeConfigMeta()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "JsonizeConfigMeta",
+      "qualified_name": "unitree::robot::b2::JsonizeConfigMeta",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeModeName()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "JsonizeModeName",
+      "qualified_name": "unitree::robot::b2::JsonizeModeName",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeSilent()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "JsonizeSilent",
+      "qualified_name": "unitree::robot::b2::JsonizeSilent",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "LowPowerStatusData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "LowPowerStatusData",
+      "qualified_name": "unitree::robot::b2::LowPowerStatusData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "LowPowerSwitchParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "LowPowerSwitchParameter",
+      "qualified_name": "unitree::robot::b2::LowPowerSwitchParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PkgVersionData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "PkgVersionData",
+      "qualified_name": "unitree::robot::b2::PkgVersionData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceState()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ServiceState",
+      "qualified_name": "unitree::robot::b2::ServiceState",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceStateData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ServiceStateData",
+      "qualified_name": "unitree::robot::b2::ServiceStateData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceSwitchData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ServiceSwitchData",
+      "qualified_name": "unitree::robot::b2::ServiceSwitchData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceSwitchParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "ServiceSwitchParameter",
+      "qualified_name": "unitree::robot::b2::ServiceSwitchParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "SetReportFreqParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "SetReportFreqParameter",
+      "qualified_name": "unitree::robot::b2::SetReportFreqParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [
+        "PathPoint"
+      ],
+      "constructors": [
+        "stPathPoint()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.b2",
+      "python_name": "stPathPoint",
+      "qualified_name": "unitree::robot::b2::stPathPoint",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataVecFloat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "JsonizeDataVecFloat",
+      "qualified_name": "unitree::robot::g1::JsonizeDataVecFloat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeVelocityCommand()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "JsonizeVelocityCommand",
+      "qualified_name": "unitree::robot::g1::JsonizeVelocityCommand",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "LedControlParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "LedControlParameter",
+      "qualified_name": "unitree::robot::g1::LedControlParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "MoveParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(unitree::common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(unitree::common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "MoveParameter",
+      "qualified_name": "unitree::robot::g1::MoveParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStopParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "PlayStopParameter",
+      "qualified_name": "unitree::robot::g1::PlayStopParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStreamParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "PlayStreamParameter",
+      "qualified_name": "unitree::robot::g1::PlayStreamParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "TtsMakerParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.g1",
+      "python_name": "TtsMakerParameter",
+      "qualified_name": "unitree::robot::g1::TtsMakerParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigDelParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigDelParameter",
+      "qualified_name": "unitree::robot::go2::ConfigDelParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigGetData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigGetData",
+      "qualified_name": "unitree::robot::go2::ConfigGetData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigGetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigGetParameter",
+      "qualified_name": "unitree::robot::go2::ConfigGetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMeta()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigMeta",
+      "qualified_name": "unitree::robot::go2::ConfigMeta",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMetaData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigMetaData",
+      "qualified_name": "unitree::robot::go2::ConfigMetaData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigMetaParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigMetaParameter",
+      "qualified_name": "unitree::robot::go2::ConfigMetaParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ConfigSetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ConfigSetParameter",
+      "qualified_name": "unitree::robot::go2::ConfigSetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeCommObjInt()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeCommObjInt",
+      "qualified_name": "unitree::robot::go2::JsonizeCommObjInt",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeConfigMeta()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeConfigMeta",
+      "qualified_name": "unitree::robot::go2::JsonizeConfigMeta",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataBool()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeDataBool",
+      "qualified_name": "unitree::robot::go2::JsonizeDataBool",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataDouble()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeDataDouble",
+      "qualified_name": "unitree::robot::go2::JsonizeDataDouble",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataFloat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeDataFloat",
+      "qualified_name": "unitree::robot::go2::JsonizeDataFloat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataInt()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeDataInt",
+      "qualified_name": "unitree::robot::go2::JsonizeDataInt",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataString()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeDataString",
+      "qualified_name": "unitree::robot::go2::JsonizeDataString",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeFlagBool()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeFlagBool",
+      "qualified_name": "unitree::robot::go2::JsonizeFlagBool",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizePathPoint()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizePathPoint",
+      "qualified_name": "unitree::robot::go2::JsonizePathPoint",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeQuat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeQuat",
+      "qualified_name": "unitree::robot::go2::JsonizeQuat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeVec3()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "JsonizeVec3",
+      "qualified_name": "unitree::robot::go2::JsonizeVec3",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ObstaclesAvoidMoveParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ObstaclesAvoidMoveParameter",
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidMoveParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ObstaclesAvoidRemoteCommandSource()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ObstaclesAvoidRemoteCommandSource",
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidRemoteCommandSource",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ObstaclesAvoidSwitchGetData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ObstaclesAvoidSwitchGetData",
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidSwitchGetData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ObstaclesAvoidSwitchSetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ObstaclesAvoidSwitchSetParameter",
+      "qualified_name": "unitree::robot::go2::ObstaclesAvoidSwitchSetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceState()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ServiceState",
+      "qualified_name": "unitree::robot::go2::ServiceState",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceStateData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ServiceStateData",
+      "qualified_name": "unitree::robot::go2::ServiceStateData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceSwitchData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ServiceSwitchData",
+      "qualified_name": "unitree::robot::go2::ServiceSwitchData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "ServiceSwitchParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "ServiceSwitchParameter",
+      "qualified_name": "unitree::robot::go2::ServiceSwitchParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "SetReportFreqParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "SetReportFreqParameter",
+      "qualified_name": "unitree::robot::go2::SetReportFreqParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "UtrackSwitchGetData()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "UtrackSwitchGetData",
+      "qualified_name": "unitree::robot::go2::UtrackSwitchGetData",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "UtrackSwitchSetParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "UtrackSwitchSetParameter",
+      "qualified_name": "unitree::robot::go2::UtrackSwitchSetParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [
+        "PathPoint"
+      ],
+      "constructors": [
+        "stPathPoint()"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.go2",
+      "python_name": "stPathPoint",
+      "qualified_name": "unitree::robot::go2::stPathPoint",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataVecFloat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h1",
+      "python_name": "JsonizeDataVecFloat",
+      "qualified_name": "unitree::robot::h1::JsonizeDataVecFloat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeTargetPos()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h1",
+      "python_name": "JsonizeTargetPos",
+      "qualified_name": "unitree::robot::h1::JsonizeTargetPos",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeVelocityCommand()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h1",
+      "python_name": "JsonizeVelocityCommand",
+      "qualified_name": "unitree::robot::h1::JsonizeVelocityCommand",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "FsmIdInfo()",
+        "FsmIdInfo(int, const std::string &)"
+      ],
+      "methods": [],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "FsmIdInfo",
+      "qualified_name": "unitree::robot::h2::FsmIdInfo",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeArmActionCommand()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "JsonizeArmActionCommand",
+      "qualified_name": "unitree::robot::h2::JsonizeArmActionCommand",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeArmActionName()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "JsonizeArmActionName",
+      "qualified_name": "unitree::robot::h2::JsonizeArmActionName",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataVecFloat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "JsonizeDataVecFloat",
+      "qualified_name": "unitree::robot::h2::JsonizeDataVecFloat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeFsmIdList()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "JsonizeFsmIdList",
+      "qualified_name": "unitree::robot::h2::JsonizeFsmIdList",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeVelocityCommand()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.h2",
+      "python_name": "JsonizeVelocityCommand",
+      "qualified_name": "unitree::robot::h2::JsonizeVelocityCommand",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeDataVecFloat()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "JsonizeDataVecFloat",
+      "qualified_name": "unitree::robot::r1::JsonizeDataVecFloat",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "JsonizeVelocityCommand()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "JsonizeVelocityCommand",
+      "qualified_name": "unitree::robot::r1::JsonizeVelocityCommand",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "LedControlParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "LedControlParameter",
+      "qualified_name": "unitree::robot::r1::LedControlParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStopParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "PlayStopParameter",
+      "qualified_name": "unitree::robot::r1::PlayStopParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "PlayStreamParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "PlayStreamParameter",
+      "qualified_name": "unitree::robot::r1::PlayStreamParameter",
+      "status": "AVAILABLE_VALUE"
+    },
+    {
+      "aliases": [],
+      "constructors": [
+        "TtsMakerParameter()"
+      ],
+      "methods": [
+        {
+          "binding_strategy": "JSON_DICT_INPUT",
+          "cpp_signature": "fromJson(common::JsonMap &)",
+          "python_name": "from_json",
+          "safety": "VALUE_TYPE"
+        },
+        {
+          "binding_strategy": "JSON_DICT_OUTPUT",
+          "cpp_signature": "toJson(common::JsonMap &) const",
+          "python_name": "to_json",
+          "safety": "VALUE_TYPE"
+        }
+      ],
+      "python_module": "unitree_sdk2_cpp.robot.r1",
+      "python_name": "TtsMakerParameter",
+      "qualified_name": "unitree::robot::r1::TtsMakerParameter",
+      "status": "AVAILABLE_VALUE"
+    }
+  ]
+}

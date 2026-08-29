@@ -1,0 +1,20 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.12"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "unitree-sdk2-cpp"
+version = "0.0.1"
+description = "Experimental pybind11 bindings for the Unitree SDK2 C++ API"
+requires-python = ">=3.10"
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+wheel.packages = []
+
+[tool.pytest.ini_options]
+markers = [
+  "dds: requires an explicitly initialized DDS environment",
+  "hardware: requires a connected Unitree robot",
+  "motion: may command physical robot motion and must never run by default",
+]

@@ -1,0 +1,254 @@
+{
+  "classes": [
+    {
+      "properties": [
+        "sec",
+        "nanosec"
+      ],
+      "python_name": "Time",
+      "qualified_name": "builtin_interfaces::msg::dds_::Time_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "stamp",
+        "frame_id"
+      ],
+      "python_name": "Header",
+      "qualified_name": "std_msgs::msg::dds_::Header_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ],
+      "python_name": "Quaternion",
+      "qualified_name": "geometry_msgs::msg::dds_::Quaternion_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "x",
+        "y",
+        "z"
+      ],
+      "python_name": "Vector3",
+      "qualified_name": "geometry_msgs::msg::dds_::Vector3_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "orientation",
+        "orientation_covariance",
+        "angular_velocity",
+        "angular_velocity_covariance",
+        "linear_acceleration",
+        "linear_acceleration_covariance"
+      ],
+      "python_name": "Imu",
+      "qualified_name": "sensor_msgs::msg::dds_::Imu_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "x",
+        "y",
+        "z"
+      ],
+      "python_name": "Point",
+      "qualified_name": "geometry_msgs::msg::dds_::Point_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "position",
+        "orientation"
+      ],
+      "python_name": "Pose",
+      "qualified_name": "geometry_msgs::msg::dds_::Pose_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "map_load_time",
+        "resolution",
+        "width",
+        "height",
+        "origin"
+      ],
+      "python_name": "MapMetaData",
+      "qualified_name": "nav_msgs::msg::dds_::MapMetaData_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "info",
+        "data"
+      ],
+      "python_name": "OccupancyGrid",
+      "qualified_name": "nav_msgs::msg::dds_::OccupancyGrid_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "pose",
+        "covariance"
+      ],
+      "python_name": "PoseWithCovariance",
+      "qualified_name": "geometry_msgs::msg::dds_::PoseWithCovariance_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "linear",
+        "angular"
+      ],
+      "python_name": "Twist",
+      "qualified_name": "geometry_msgs::msg::dds_::Twist_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "twist",
+        "covariance"
+      ],
+      "python_name": "TwistWithCovariance",
+      "qualified_name": "geometry_msgs::msg::dds_::TwistWithCovariance_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "child_frame_id",
+        "pose",
+        "twist"
+      ],
+      "python_name": "Odometry",
+      "qualified_name": "nav_msgs::msg::dds_::Odometry_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "x",
+        "y",
+        "z"
+      ],
+      "python_name": "Point32",
+      "qualified_name": "geometry_msgs::msg::dds_::Point32_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "name",
+        "offset",
+        "datatype",
+        "count"
+      ],
+      "python_name": "PointField",
+      "qualified_name": "sensor_msgs::msg::dds_::PointField_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "height",
+        "width",
+        "fields",
+        "is_bigendian",
+        "point_step",
+        "row_step",
+        "data",
+        "is_dense"
+      ],
+      "python_name": "PointCloud2",
+      "qualified_name": "sensor_msgs::msg::dds_::PointCloud2_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "point"
+      ],
+      "python_name": "PointStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::PointStamped_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "x",
+        "y",
+        "theta"
+      ],
+      "python_name": "Pose2D",
+      "qualified_name": "geometry_msgs::msg::dds_::Pose2D_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "pose"
+      ],
+      "python_name": "PoseStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::PoseStamped_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "pose"
+      ],
+      "python_name": "PoseWithCovarianceStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::PoseWithCovarianceStamped_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "quaternion"
+      ],
+      "python_name": "QuaternionStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::QuaternionStamped_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "data"
+      ],
+      "python_name": "String",
+      "qualified_name": "std_msgs::msg::dds_::String_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "twist"
+      ],
+      "python_name": "TwistStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::TwistStamped_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "header",
+        "twist"
+      ],
+      "python_name": "TwistWithCovarianceStamped",
+      "qualified_name": "geometry_msgs::msg::dds_::TwistWithCovarianceStamped_",
+      "skipped_fields": []
+    }
+  ],
+  "function": "BindRos2Idl",
+  "namespace_prefix": [
+    "builtin_interfaces::msg::dds_",
+    "geometry_msgs::msg::dds_",
+    "nav_msgs::msg::dds_",
+    "sensor_msgs::msg::dds_",
+    "std_msgs::msg::dds_"
+  ],
+  "schema_version": 1
+}

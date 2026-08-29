@@ -1,0 +1,372 @@
+{
+  "classes": [
+    {
+      "properties": [
+        "time_frame",
+        "data"
+      ],
+      "python_name": "AudioData",
+      "qualified_name": "unitree_go::msg::dds_::AudioData_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "off",
+        "reserve"
+      ],
+      "python_name": "BmsCmd",
+      "qualified_name": "unitree_go::msg::dds_::BmsCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "version_high",
+        "version_low",
+        "status",
+        "soc",
+        "current",
+        "cycle",
+        "bq_ntc",
+        "mcu_ntc",
+        "cell_vol"
+      ],
+      "python_name": "BmsState",
+      "qualified_name": "unitree_go::msg::dds_::BmsState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "name",
+        "content"
+      ],
+      "python_name": "ConfigChangeStatus",
+      "qualified_name": "unitree_go::msg::dds_::ConfigChangeStatus_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "source",
+        "state"
+      ],
+      "python_name": "Error",
+      "qualified_name": "unitree_go::msg::dds_::Error_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "time_frame",
+        "video720p",
+        "video360p",
+        "video180p"
+      ],
+      "python_name": "Go2FrontVideoData",
+      "qualified_name": "unitree_go::msg::dds_::Go2FrontVideoData_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "stamp",
+        "frame_id",
+        "resolution",
+        "width",
+        "height",
+        "origin",
+        "data"
+      ],
+      "python_name": "HeightMap",
+      "qualified_name": "unitree_go::msg::dds_::HeightMap_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "quaternion",
+        "gyroscope",
+        "accelerometer",
+        "rpy",
+        "temperature"
+      ],
+      "python_name": "IMUState",
+      "qualified_name": "unitree_go::msg::dds_::IMUState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "value",
+        "reserve"
+      ],
+      "python_name": "InterfaceConfig",
+      "qualified_name": "unitree_go::msg::dds_::InterfaceConfig_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "stamp",
+        "firmware_version",
+        "software_version",
+        "sdk_version",
+        "sys_rotation_speed",
+        "com_rotation_speed",
+        "error_state",
+        "dirty_percentage",
+        "cloud_frequency",
+        "cloud_packet_loss_rate",
+        "cloud_size",
+        "cloud_scan_num",
+        "imu_frequency",
+        "imu_packet_loss_rate",
+        "imu_rpy",
+        "serial_recv_stamp",
+        "serial_buffer_size",
+        "serial_buffer_read"
+      ],
+      "python_name": "LidarState",
+      "qualified_name": "unitree_go::msg::dds_::LidarState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "q",
+        "dq",
+        "tau",
+        "kp",
+        "kd",
+        "reserve"
+      ],
+      "python_name": "MotorCmd",
+      "qualified_name": "unitree_go::msg::dds_::MotorCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "head",
+        "level_flag",
+        "frame_reserve",
+        "sn",
+        "version",
+        "bandwidth",
+        "motor_cmd",
+        "bms_cmd",
+        "wireless_remote",
+        "led",
+        "fan",
+        "gpio",
+        "reserve",
+        "crc"
+      ],
+      "python_name": "LowCmd",
+      "qualified_name": "unitree_go::msg::dds_::LowCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "q",
+        "dq",
+        "ddq",
+        "tau_est",
+        "q_raw",
+        "dq_raw",
+        "ddq_raw",
+        "temperature",
+        "lost",
+        "reserve"
+      ],
+      "python_name": "MotorState",
+      "qualified_name": "unitree_go::msg::dds_::MotorState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "head",
+        "level_flag",
+        "frame_reserve",
+        "sn",
+        "version",
+        "bandwidth",
+        "imu_state",
+        "motor_state",
+        "bms_state",
+        "foot_force",
+        "foot_force_est",
+        "tick",
+        "wireless_remote",
+        "bit_flag",
+        "adc_reel",
+        "temperature_ntc1",
+        "temperature_ntc2",
+        "power_v",
+        "power_a",
+        "fan_frequency",
+        "reserve",
+        "crc"
+      ],
+      "python_name": "LowState",
+      "qualified_name": "unitree_go::msg::dds_::LowState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "cmds"
+      ],
+      "python_name": "MotorCmds",
+      "qualified_name": "unitree_go::msg::dds_::MotorCmds_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "states"
+      ],
+      "python_name": "MotorStates",
+      "qualified_name": "unitree_go::msg::dds_::MotorStates_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "t_from_start",
+        "x",
+        "y",
+        "yaw",
+        "vx",
+        "vy",
+        "vyaw"
+      ],
+      "python_name": "PathPoint",
+      "qualified_name": "unitree_go::msg::dds_::PathPoint_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "uuid",
+        "body"
+      ],
+      "python_name": "Req",
+      "qualified_name": "unitree_go::msg::dds_::Req_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "uuid",
+        "data",
+        "body"
+      ],
+      "python_name": "Res",
+      "qualified_name": "unitree_go::msg::dds_::Res_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "mode",
+        "gait_type",
+        "speed_level",
+        "foot_raise_height",
+        "body_height",
+        "position",
+        "euler",
+        "velocity",
+        "yaw_speed",
+        "bms_cmd",
+        "path_point"
+      ],
+      "python_name": "SportModeCmd",
+      "qualified_name": "unitree_go::msg::dds_::SportModeCmd_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "sec",
+        "nanosec"
+      ],
+      "python_name": "TimeSpec",
+      "qualified_name": "unitree_go::msg::dds_::TimeSpec_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "stamp",
+        "error_code",
+        "imu_state",
+        "mode",
+        "progress",
+        "gait_type",
+        "foot_raise_height",
+        "position",
+        "body_height",
+        "velocity",
+        "yaw_speed",
+        "range_obstacle",
+        "foot_force",
+        "foot_position_body",
+        "foot_speed_body",
+        "path_point"
+      ],
+      "python_name": "SportModeState",
+      "qualified_name": "unitree_go::msg::dds_::SportModeState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "version",
+        "channel",
+        "joy_mode",
+        "orientation_est",
+        "pitch_est",
+        "distance_est",
+        "yaw_est",
+        "tag_roll",
+        "tag_pitch",
+        "tag_yaw",
+        "base_roll",
+        "base_pitch",
+        "base_yaw",
+        "joystick",
+        "error_state",
+        "buttons",
+        "enabled_from_app"
+      ],
+      "python_name": "UwbState",
+      "qualified_name": "unitree_go::msg::dds_::UwbState_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "enabled"
+      ],
+      "python_name": "UwbSwitch",
+      "qualified_name": "unitree_go::msg::dds_::UwbSwitch_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "stamp",
+        "frame_id",
+        "resolution",
+        "origin",
+        "width",
+        "src_size",
+        "data"
+      ],
+      "python_name": "VoxelMapCompressed",
+      "qualified_name": "unitree_go::msg::dds_::VoxelMapCompressed_",
+      "skipped_fields": []
+    },
+    {
+      "properties": [
+        "lx",
+        "ly",
+        "rx",
+        "ry",
+        "keys"
+      ],
+      "python_name": "WirelessController",
+      "qualified_name": "unitree_go::msg::dds_::WirelessController_",
+      "skipped_fields": []
+    }
+  ],
+  "function": "BindGo2Idl",
+  "namespace_prefix": [
+    "unitree_go::msg::dds_"
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "classes": [
+    {
+      "properties": [
+        "quaternion",
+        "gyroscope",
+        "accelerometer",
+        "rpy",
+        "temperature",
+        "tick"
+      ],
+      "python_name": "doubleIMUState",
+      "qualified_name": "unitree_hg_doubleimu::msg::dds_::doubleIMUState_",
+      "skipped_fields": []
+    }
+  ],
+  "function": "BindHgDoubleImuIdl",
+  "namespace_prefix": [
+    "unitree_hg_doubleimu::msg::dds_"
+  ],
+  "schema_version": 1
+}

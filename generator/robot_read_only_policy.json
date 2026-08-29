@@ -1,0 +1,117 @@
+{
+  "schema_version": 2,
+  "utility_classes": {
+    "unitree::robot::LeaseCache": [
+      "Set(int64_t, const std::string &, int64_t)",
+      "Renewal(int64_t)",
+      "Clear()",
+      "GetLastModified() const",
+      "GetId() const",
+      "GetName() const"
+    ],
+    "unitree::robot::LeaseContext": [
+      "Update(int64_t, int64_t)",
+      "Reset()",
+      "Valid() const",
+      "GetId() const",
+      "GetTerm() const"
+    ]
+  },
+  "mutable_inputs": {
+    "unitree::robot::b2::SportClient": [
+      "TrajectoryFollow(std::vector<unitree::robot::b2::PathPoint> &)"
+    ],
+    "unitree::robot::h2::LocoClient": [
+      "SetPunchApi(std::vector<float> &)"
+    ]
+  },
+  "classes": {
+    "unitree::robot::a2::AudioClient": [
+      "GetVolume(uint8_t &)"
+    ],
+    "unitree::robot::a2::SportClient": [
+      "GetState(std::map<std::string, std::string> &)"
+    ],
+    "unitree::robot::as2::SportClient": [
+      "GetState(std::map<std::string, std::string> &)"
+    ],
+    "unitree::robot::b2::BackVideoClient": [
+      "GetImageSample(std::vector<uint8_t> &)"
+    ],
+    "unitree::robot::b2::ConfigClient": [
+      "Get(const std::string &, std::string &)"
+    ],
+    "unitree::robot::b2::FrontVideoClient": [
+      "GetImageSample(std::vector<uint8_t> &)"
+    ],
+    "unitree::robot::b2::MotionSwitcherClient": [
+      "CheckMode(std::string &, std::string &)",
+      "GetSilent(bool &)"
+    ],
+    "unitree::robot::b2::RobotStateClient": [
+      "ServiceList(std::vector<ServiceState> &)",
+      "GetPkgVersion(std::string &, std::map<std::string, std::string> &)"
+    ],
+    "unitree::robot::g1::AudioClient": [
+      "GetVolume(uint8_t &)"
+    ],
+    "unitree::robot::g1::G1ArmActionClient": [
+      "GetActionList(std::string &)"
+    ],
+    "unitree::robot::g1::LocoClient": [
+      "GetFsmId(int &)",
+      "GetFsmMode(int &)",
+      "GetBalanceMode(int &)",
+      "GetSwingHeight(float &)",
+      "GetStandHeight(float &)",
+      "GetPhase(std::vector<float> &)",
+      "GetMimicMotion(std::string &)"
+    ],
+    "unitree::robot::go2::ConfigClient": [
+      "Get(const std::string &, std::string &)"
+    ],
+    "unitree::robot::go2::RobotStateClient": [
+      "ServiceList(std::vector<ServiceState> &)"
+    ],
+    "unitree::robot::go2::UtrackClient": [
+      "IsTracking(bool &)"
+    ],
+    "unitree::robot::go2::VideoClient": [
+      "GetImageSample(std::vector<uint8_t> &)"
+    ],
+    "unitree::robot::go2::VuiClient": [
+      "GetSwitch(int &)",
+      "GetVolume(int &)",
+      "GetBrightness(int &)"
+    ],
+    "unitree::robot::h1::LocoClient": [
+      "GetFsmId(int &)",
+      "GetFsmMode(int &)",
+      "GetBalanceMode(int &)",
+      "GetSwingHeight(float &)",
+      "GetStandHeight(float &)",
+      "GetPhase(std::vector<float> &)",
+      "GetOdom(float &, float &, float &)"
+    ],
+    "unitree::robot::h2::H2ArmActionClient": [
+      "GetActionList(std::string &)"
+    ],
+    "unitree::robot::h2::LocoClient": [
+      "GetFsmId(int &)",
+      "GetFsmMode(int &)",
+      "GetBalanceMode(int &)",
+      "GetSwingHeight(float &)",
+      "GetStandHeight(float &)",
+      "GetPhase(std::vector<float> &)",
+      "GetArmSdkStatus(bool &)",
+      "GetAvailableFsmIds(std::vector<int> &, std::vector<std::string> &)"
+    ],
+    "unitree::robot::r1::AudioClient": [
+      "GetVolume(uint8_t &)"
+    ],
+    "unitree::robot::r1::LocoClient": [
+      "GetFsmId(int &)",
+      "GetFsmMode(int &)"
+    ]
+  }
+}

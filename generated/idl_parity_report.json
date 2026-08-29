@@ -1,0 +1,66 @@
+{
+  "classes": {
+    "coverage": 1.0,
+    "cpp": 64,
+    "extra": [],
+    "missing": [],
+    "python": 64
+  },
+  "diagnostics": [],
+  "fields": {
+    "counts": {
+      "IGNORED": 0,
+      "MANUAL": 0,
+      "MISSING": 0,
+      "SUPPORTED": 341,
+      "UNSUPPORTED": 0
+    },
+    "cpp": 341,
+    "missing": []
+  },
+  "methods": {
+    "counts": {
+      "IGNORED": 557,
+      "MANUAL": 0,
+      "MISSING": 0,
+      "SUPPORTED": 874,
+      "UNSUPPORTED": 0
+    },
+    "cpp": 1431,
+    "generated_properties": 341,
+    "missing": []
+  },
+  "schema_version": 2,
+  "status": {
+    "classes": {
+      "counts": {
+        "IGNORED": 0,
+        "MANUAL": 0,
+        "MISSING": 0,
+        "SUPPORTED": 64,
+        "UNSUPPORTED": 0
+      },
+      "missing": []
+    },
+    "fields": {
+      "counts": {
+        "IGNORED": 0,
+        "MANUAL": 0,
+        "MISSING": 0,
+        "SUPPORTED": 341,
+        "UNSUPPORTED": 0
+      },
+      "missing": []
+    },
+    "methods": {
+      "counts": {
+        "IGNORED": 557,
+        "MANUAL": 0,
+        "MISSING": 0,
+        "SUPPORTED": 874,
+        "UNSUPPORTED": 0
+      },
+      "missing": []
+    }
+  }
+}

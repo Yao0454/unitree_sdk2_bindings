@@ -1,0 +1,34 @@
+{
+  "classes": {
+    "unitree_go::msg::dds_::IMUState_": {
+      "python_name": "IMUState"
+    },
+    "unitree_go::msg::dds_::MotorState_": {
+      "python_name": "MotorState"
+    },
+    "unitree::robot::ChannelFactory": {
+      "status": "MANUAL",
+      "reason": "Singleton initialization and DDS lifetime are bound by src/channel/channels.cpp"
+    },
+    "unitree::robot::ChannelPublisher": {
+      "status": "MANUAL",
+      "reason": "C++ template specializations are selected through the generated message registry"
+    },
+    "unitree::robot::ChannelSubscriber": {
+      "status": "MANUAL",
+      "reason": "Worker-thread callbacks require explicit GIL and shutdown handling"
+    }
+  },
+  "methods": {},
+  "types": {
+    "std::function": {
+      "status": "MANUAL"
+    },
+    "Eigen": {
+      "status": "MANUAL"
+    },
+    "raw_pointer": {
+      "status": "UNSUPPORTED"
+    }
+  }
+}
