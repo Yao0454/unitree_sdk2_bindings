@@ -600,7 +600,12 @@ def generate(arguments: argparse.Namespace) -> dict[str, Any]:
     ]
 
     output = arguments.output
-    package = output / "unitree_sdk2_cpp"
+    # PEP 561 requires a distribution named ``foo-stubs`` to install its
+    # declarations in a sibling package directory named ``foo-stubs``. Keeping
+    # them out of ``unitree_sdk2_cpp/`` is also essential here: the runtime is a
+    # top-level native extension, and a Python package directory of the same
+    # name would shadow that extension during import.
+    package = output / "unitree_sdk2_cpp-stubs"
     idl_python_names = {
         item["qualified_name"]: item["python_name"]
         for report in idl_reports
@@ -720,7 +725,7 @@ class ChannelSubscriber(Generic[MessageT]):
         "from typing import overload",
         "",
         "from .hg import (",
-        *(f"    {name}," for name in hg_class_names),
+        *(f"    {name} as {name}," for name in hg_class_names),
         ")",
         "",
         "@overload",

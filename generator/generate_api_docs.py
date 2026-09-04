@@ -1457,18 +1457,23 @@ def render_module(
     return lines
 
 
+def module_filename(module_name: str) -> str:
+    if module_name == PACKAGE_NAME:
+        return "core.md"
+    relative_name = module_name.removeprefix(f"{PACKAGE_NAME}.")
+    return relative_name.replace(".", "-") + ".md"
+
+
 def render_document(
     modules: list[ModuleDoc],
     manifest: dict[str, Any],
     stats: GenerationStats,
-    binding_root: Path,
 ) -> str:
-    _, class_index = load_cpp_members(binding_root)
     lines = [
         "# Unitree SDK2 Python 完整 API 参考",
         "",
-        "本参考采用常见科学计算库的 API Reference 组织方式：先按模块分类索引，"
-        "再为每个类、函数和属性提供签名、参数、返回值、可用性、C++ 对应项和用法。"
+        "本页是完整 API Reference 的总索引。详细内容按 Python 模块拆分到 `api/` 目录，"
+        "每个分卷为类、函数和属性提供签名、参数、返回值、可用性、C++ 对应项和用法。"
         "学习路径和完整教程请先阅读 [从零开始指南](BEGINNER_GUIDE_ZH.md)。",
         "",
         "> [!WARNING]",
@@ -1477,8 +1482,9 @@ def render_document(
         "默认测试绝不会构造客户端、初始化 DDS 或发送机器人指令。",
         "",
         "> [!NOTE]",
-        "> 本文件由 `generator/generate_api_docs.py` 从 `.pyi`、`api_manifest.json` "
-        "和 Clang AST 清单生成。不要手工维护 API 条目；修改签名后应重新生成并运行测试。",
+        "> 本索引和 `api/` 中的分卷均由 `generator/generate_api_docs.py` 从 `.pyi`、"
+        "`api_manifest.json` 和 Clang AST 清单生成。不要手工维护 API 条目；"
+        "修改签名后应重新生成并运行测试。",
         "",
         "## 如何阅读本参考",
         "",
@@ -1514,22 +1520,59 @@ def render_document(
         "一个 Python 属性在 manifest 中占一个条目，但下文会同时写出 getter 和 setter 签名。"
         "重载方法按不同 C++ 签名分别展开。",
         "",
-        "## 分类索引",
+        "## 分卷索引",
         "",
-        "| 分类 | Python 模块 | 函数 | 类 |",
-        "| --- | --- | ---: | ---: |",
+        "| 分类 | Python 模块 | 函数 | 类 | 文档 |",
+        "| --- | --- | ---: | ---: | --- |",
     ]
     for module in modules:
         lines.append(
-            f"| {module_title(module.name)} | "
-            f"[`{module.name}`](#{anchor(module.name)}) | "
-            f"{len(module.functions)} | {len(module.classes)} |"
+            f"| {module_title(module.name)} | `{module.name}` | "
+            f"{len(module.functions)} | {len(module.classes)} | "
+            f"[打开分卷](api/{module_filename(module.name)}#{anchor(module.name)}) |"
         )
-    lines.extend(["", "---", ""])
-    for index, module in enumerate(modules):
-        lines.extend(render_module(module, binding_root, class_index))
-        if index != len(modules) - 1:
-            lines.extend(["---", ""])
+    lines.extend(
+        [
+            "",
+            "## 建议阅读方式",
+            "",
+            "1. 从上表选择目标型号或模块；",
+            "2. 在分卷的类索引中选择 Client 或消息类型；",
+            "3. 查看具体成员的可用性和安全分类；",
+            "4. 使用编辑器补全和类型检查确认实际调用签名。",
+            "",
+            "需要跨全部 API 自动检索时，优先读取打包在 stub 中的 "
+            "`unitree_sdk2_cpp/api_manifest.json`。",
+        ]
+    )
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_module_document(
+    module: ModuleDoc,
+    binding_root: Path,
+    class_index: dict[str, dict[str, Any]],
+) -> str:
+    lines = [
+        "# Unitree SDK2 Python API 参考分卷",
+        "",
+        "[返回 API 总索引](../API_REFERENCE_ZH.md) · "
+        "[阅读从零开始指南](../BEGINNER_GUIDE_ZH.md)",
+        "",
+        "> [!WARNING]",
+        "> 本分卷同时包含 `AVAILABLE` 和 `SIGNATURE_ONLY`。后者只是设计期类型签名。"
+        "运动及硬件副作用方法即使标记为 `AVAILABLE`，也不表示当前环境可安全执行。",
+        "",
+        "> [!NOTE]",
+        "> 本文件由 `generator/generate_api_docs.py` 自动生成，请勿手工维护 API 条目。",
+        "",
+        "---",
+        "",
+        *render_module(module, binding_root, class_index),
+        "---",
+        "",
+        "[返回 API 总索引](../API_REFERENCE_ZH.md)",
+    ]
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -1537,9 +1580,17 @@ def generate(binding_root: Path, output: Path) -> GenerationStats:
     modules, manifest, stats = parse_stubs(binding_root)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(
-        render_document(modules, manifest, stats, binding_root),
+        render_document(modules, manifest, stats),
         encoding="utf-8",
     )
+    detail_directory = output.parent / "api"
+    detail_directory.mkdir(parents=True, exist_ok=True)
+    _, class_index = load_cpp_members(binding_root)
+    for module in modules:
+        (detail_directory / module_filename(module.name)).write_text(
+            render_module_document(module, binding_root, class_index),
+            encoding="utf-8",
+        )
     return stats
 
 

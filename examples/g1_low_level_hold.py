@@ -16,8 +16,9 @@ import threading
 import time
 from dataclasses import dataclass, field
 
-from unitree_sdk2_cpp import channel, robot
+from unitree_sdk2_cpp import channel
 from unitree_sdk2_cpp.idl import g1
+from unitree_sdk2_cpp.robot import g1 as g1_robot
 
 
 NUM_G1_MOTORS = 35
@@ -49,11 +50,11 @@ def safety_fault(state: g1.LowState) -> str | None:
     """Return the first official G1 safety check that reports a fault."""
 
     checks = (
-        ("bad_orientation", robot.g1.bad_orientation(state)),
-        ("joint_vel_out_of_limit", robot.g1.joint_vel_out_of_limit(state)),
-        ("ang_vel_out_of_limit", robot.g1.ang_vel_out_of_limit(state)),
-        ("motor_winding_overheat", robot.g1.motor_winding_overheat(state)),
-        ("motor_casing_overheat", robot.g1.motor_casing_overheat(state)),
+        ("bad_orientation", g1_robot.bad_orientation(state)),
+        ("joint_vel_out_of_limit", g1_robot.joint_vel_out_of_limit(state)),
+        ("ang_vel_out_of_limit", g1_robot.ang_vel_out_of_limit(state)),
+        ("motor_winding_overheat", g1_robot.motor_winding_overheat(state)),
+        ("motor_casing_overheat", g1_robot.motor_casing_overheat(state)),
     )
     for name, failed in checks:
         if failed:
@@ -140,7 +141,7 @@ def main() -> int:
     store = StateStore()
     subscriber: channel.ChannelSubscriber[g1.LowState] | None = None
     publisher: channel.ChannelPublisher[g1.LowCmd] | None = None
-    client: robot.g1.LocoClient | None = None
+    client: g1_robot.LocoClient | None = None
     subscriber_initialized = False
     publisher_initialized = False
     channel_initialized = False
@@ -168,7 +169,7 @@ def main() -> int:
             publisher.init_channel()
             publisher_initialized = True
 
-            client = robot.g1.LocoClient()
+            client = g1_robot.LocoClient()
             client.set_timeout(5.0)
             client.init()
             status, fsm_id = client.get_fsm_id()
@@ -192,7 +193,7 @@ def main() -> int:
             fault = safety_fault(state)
             if fault is not None:
                 raise RuntimeError(f"G1 safety check failed: {fault}")
-            if subscriber is None or robot.g1.lost_connection(subscriber, 1000):
+            if subscriber is None or g1_robot.lost_connection(subscriber, 1000):
                 raise RuntimeError("G1 LowState connection lost")
 
             now = time.monotonic()

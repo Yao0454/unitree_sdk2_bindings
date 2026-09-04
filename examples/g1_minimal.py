@@ -7,16 +7,31 @@ from unitree_sdk2_cpp import channel
 from unitree_sdk2_cpp.idl import g1
 
 
-interface = sys.argv[1] if len(sys.argv) > 1 else "eth0"
+def main() -> int:
+    interface = sys.argv[1] if len(sys.argv) > 1 else "eth0"
+    channel_ready = False
+    publisher: channel.ChannelPublisher[g1.LowCmd] | None = None
+    publisher_ready = False
 
-channel.initialize(0, interface)
-publisher = channel.ChannelPublisher("rt/lowcmd", g1.LowCmd)
-publisher.init_channel()
+    try:
+        channel.initialize(0, interface)
+        channel_ready = True
 
-command = g1.LowCmd()
-command.motor_cmd = [g1.MotorCmd() for _ in range(35)]
-g1.update_crc(command)
-print("published:", publisher.write(command))
+        publisher = channel.ChannelPublisher("rt/lowcmd", g1.LowCmd)
+        publisher.init_channel()
+        publisher_ready = True
 
-publisher.close_channel()
-channel.release()
+        command = g1.LowCmd()
+        command.motor_cmd = [g1.MotorCmd() for _ in range(35)]
+        g1.update_crc(command)
+        print("published:", publisher.write(command))
+        return 0
+    finally:
+        if publisher is not None and publisher_ready:
+            publisher.close_channel()
+        if channel_ready:
+            channel.release()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

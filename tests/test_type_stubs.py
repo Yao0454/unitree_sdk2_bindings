@@ -13,7 +13,7 @@ from generate_type_stubs import generate  # noqa: E402
 
 
 STUB_ROOT = ROOT / "stubs" / "src"
-PACKAGE_ROOT = STUB_ROOT / "unitree_sdk2_cpp"
+PACKAGE_ROOT = STUB_ROOT / "unitree_sdk2_cpp-stubs"
 
 
 def _arguments(output: Path) -> Namespace:
@@ -71,6 +71,26 @@ def test_top_level_modules_are_explicitly_reexported_for_auto_import() -> None:
     assert '__all__ = ["channel", "idl", "robot", "OsHelper"]' in root_stub
 
 
+def test_g1_message_aliases_are_explicitly_reexported() -> None:
+    g1_stub = (PACKAGE_ROOT / "idl" / "g1.pyi").read_text(encoding="utf-8")
+    for name in (
+        "AgvBmsState",
+        "BmsCmd",
+        "BmsState",
+        "MotorCmd",
+        "HandCmd",
+        "IMUState",
+        "MotorState",
+        "PressSensorState",
+        "HandState",
+        "LowCmd",
+        "LowState",
+        "MainBoardState",
+        "SportModeState",
+    ):
+        assert f"{name} as {name}" in g1_stub
+
+
 def test_stub_distribution_uses_importable_package_layout() -> None:
     configuration = tomllib.loads(
         (ROOT / "stubs" / "pyproject.toml").read_text(encoding="utf-8")
@@ -78,12 +98,18 @@ def test_stub_distribution_uses_importable_package_layout() -> None:
     setuptools = configuration["tool"]["setuptools"]
     assert "py-modules" not in setuptools
     assert setuptools["packages"] == [
-        "unitree_sdk2_cpp",
-        "unitree_sdk2_cpp.idl",
-        "unitree_sdk2_cpp.robot",
+        "unitree_sdk2_cpp-stubs",
+        "unitree_sdk2_cpp-stubs.idl",
+        "unitree_sdk2_cpp-stubs.robot",
     ]
-    assert PACKAGE_ROOT.name.isidentifier()
+    assert PACKAGE_ROOT.name == "unitree_sdk2_cpp-stubs"
     assert not (STUB_ROOT / "unitree_sdk2_cpp.py").exists()
+
+
+def test_distribution_contains_only_pep561_stub_files() -> None:
+    stub_paths = set(PACKAGE_ROOT.rglob("*.pyi"))
+    assert len(stub_paths) == 17
+    assert not list(PACKAGE_ROOT.rglob("*.py"))
 
 
 def test_manifest_exposes_motion_signatures_without_executing_them() -> None:

@@ -174,14 +174,32 @@ documentation and in the packaged `api_manifest.json`. Motion methods are now
 The manifest retains `MOTION_COMMAND` and `HARDWARE_SIDE_EFFECT` metadata so an
 Agent or test harness can enforce an explicit execution policy.
 
+## Examples
+
+The `examples/` directory is ordered by capability rather than by safety. Read
+the warnings in each file before running it against a physical robot:
+
+- `g1_build_lowcmd.py` builds a G1 message and CRC entirely in memory;
+- `dds_string_roundtrip.py` demonstrates typed DDS lifecycle on a tutorial topic;
+- `g1_read_only_status.py` demonstrates Client status handling and a structured
+  `main()` without sending a motion command;
+- `g1_state_monitor.py` demonstrates an immutable callback-to-main snapshot;
+- `g1_arm_action.py`, `g1_low_level_hold.py`, and `g1_minimal.py` cross the
+  physical-motion boundary in some or all modes and require a separate safety
+  procedure.
+
+The beginner guide contains the complete coding conventions for data models,
+exceptions, status codes, callbacks, lifecycle, shutdown, and test isolation.
+
 ## Documentation
 
 - [Chinese beginner guide](docs/BEGINNER_GUIDE_ZH.md)
-- [Complete Chinese API reference](docs/API_REFERENCE_ZH.md)
+- [Complete Chinese API reference index](docs/API_REFERENCE_ZH.md), split into
+  16 module pages under `docs/api/`
 
-The API reference is generated from the checked-in `.pyi` files, availability
-manifest, and Clang AST inventories. Regenerate it after changing the signature
-surface:
+The API reference index and all module pages are generated from the checked-in
+`.pyi` files, availability manifest, and Clang AST inventories. Regenerate them
+after changing the signature surface:
 
 ```bash
 python generator/generate_api_docs.py

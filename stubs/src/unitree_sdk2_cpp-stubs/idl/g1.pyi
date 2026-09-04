@@ -2,19 +2,19 @@
 from typing import overload
 
 from .hg import (
-    AgvBmsState,
-    BmsCmd,
-    BmsState,
-    MotorCmd,
-    HandCmd,
-    IMUState,
-    MotorState,
-    PressSensorState,
-    HandState,
-    LowCmd,
-    LowState,
-    MainBoardState,
-    SportModeState,
+    AgvBmsState as AgvBmsState,
+    BmsCmd as BmsCmd,
+    BmsState as BmsState,
+    MotorCmd as MotorCmd,
+    HandCmd as HandCmd,
+    IMUState as IMUState,
+    MotorState as MotorState,
+    PressSensorState as PressSensorState,
+    HandState as HandState,
+    LowCmd as LowCmd,
+    LowState as LowState,
+    MainBoardState as MainBoardState,
+    SportModeState as SportModeState,
 )
 
 @overload

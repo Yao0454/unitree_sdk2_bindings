@@ -21,8 +21,9 @@ unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
 
 > [!TIP]
 > 需要逐项查找全部函数、重载、属性、参数和返回值时，请打开
-> [完整 API 参考](API_REFERENCE_ZH.md)。入门指南负责解释概念和学习顺序，API Reference
-> 则像字典一样按模块和类列出全部 1213 个 manifest 条目。
+> [完整 API 参考总索引](API_REFERENCE_ZH.md)。入门指南负责解释概念和学习顺序，
+> API Reference 则拆成 16 个模块分卷，像字典一样按模块和类列出全部 1213 个
+> manifest 条目。
 
 > [!WARNING]
 > 机器人是物理设备。错误的控制命令可能导致机器人突然运动、跌倒、碰撞、损坏设备或伤人。当前 binding 已注册运动 API，但“能调用”绝不等于“已对你的机器人和现场验证为安全”。本文不提供可直接执行的运动控制示例，也不要把自定义发布示例改成机器人控制主题。默认测试不会构造 Client、初始化 DDS 或发送任何机器人指令。
@@ -46,6 +47,7 @@ unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
 - [Robot Client 入门](#robot-client-入门)
 - [处理状态码和返回元组](#处理状态码和返回元组)
 - [理解回调、线程和 GIL](#理解回调线程和-gil)
+- [工程化开发规范](#工程化开发规范)
 - [运动 API 的安全边界](#运动-api-的安全边界)
 - [查询完整 API 清单](#查询完整-api-清单)
 - [常见错误与解决办法](#常见错误与解决办法)
@@ -53,7 +55,7 @@ unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
 - [API 速查](#api-速查)
 - [版本、覆盖率与验证状态](#版本覆盖率与验证状态)
 - [推荐学习路线](#推荐学习路线)
-- [完整 API 参考](API_REFERENCE_ZH.md)
+- [完整 API 参考总索引](API_REFERENCE_ZH.md)
 
 ---
 
@@ -1880,6 +1882,432 @@ def callback(message: LowState) -> None:
 
 ---
 
+## 工程化开发规范
+
+前面的章节分别介绍了消息、Channel、Client、状态码和回调。本章把这些知识组合成一套可以长期维护的项目规范。
+
+这套规范的目标不是让代码看起来更复杂，而是保证下面这些情况都能得到确定的结果：
+
+- 参数写错时，在连接机器人之前就退出；
+- SDK 返回非零状态码时，不会被当成成功；
+- DDS 初始化或业务代码抛出异常时，已经启动的资源仍然关闭；
+- DDS 回调和主线程不会无保护地同时修改同一份状态；
+- 导入模块、运行单元测试或使用编辑器补全时，不会意外发送机器人命令；
+- 程序收到 Ctrl+C 后，返回明确退出码并按顺序释放资源；
+- 运动程序的收尾动作由具体控制模式决定，而不是盲目调用一个名字像“停止”的方法。
+
+### 推荐的项目目录
+
+小型程序可以先从一个文件开始。当代码同时包含参数解析、状态订阅和机器人动作时，建议拆成下面的结构：
+
+```text
+src/g1agent/
+├── __init__.py
+├── main.py          # 程序入口，只负责组织流程和退出码
+├── config.py        # 命令行参数和不可变配置
+├── models.py        # 应用自己的 dataclass / enum
+├── sdk.py           # 对 unitree_sdk2_cpp 的薄适配层
+├── state.py         # DDS 回调与线程安全状态缓存
+└── safety.py        # 参数范围、FSM、连接和现场启用检查
+
+tests/
+├── test_models.py   # 不连接硬件
+├── test_safety.py   # 不连接硬件
+└── test_sdk_fake.py # 使用 fake，不初始化 DDS
+```
+
+不要按“每个类一个文件”机械拆分。拆分边界应当反映职责：业务代码不应到处直接操作 DDS 消息，硬件适配器也不应包含路径规划或 UI 逻辑。
+
+### 区分三类数据
+
+一个稳定的应用通常同时存在三类数据：
+
+| 类型 | 例子 | 规则 |
+| --- | --- | --- |
+| 配置数据 | 网卡、domain、超时时间 | 使用不可变 `dataclass`，启动前验证 |
+| 业务数据 | 当前姿态、任务状态、目标点 | 使用应用自己的 `dataclass` / `enum` |
+| DDS 线缆数据 | `LowState`、`LowCmd`、`String` | 只在 SDK 边界构造、校验和转换 |
+
+配置对象推荐这样写：
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True, slots=True)
+class AppConfig:
+    interface: str
+    domain_id: int = 0
+    timeout_s: float = 5.0
+```
+
+`frozen=True` 防止程序运行中某个函数无意修改全局配置；`slots=True` 能阻止拼错字段名后悄悄创建新属性。
+
+业务状态不要直接保存成随处可改的字典：
+
+```python
+@dataclass(frozen=True, slots=True)
+class RobotSnapshot:
+    fsm_id: int
+    roll_rad: float
+    pitch_rad: float
+    received_at_s: float
+```
+
+字段名应尽量带单位，例如：
+
+- `timeout_s`：秒；
+- `period_ms`：毫秒；
+- `position_rad`：弧度；
+- `velocity_rad_s`：弧度每秒；
+- `stand_height_m`：米。
+
+这能减少把毫秒传给秒接口、把角度传给弧度接口一类错误。
+
+### 不要让 DDS 消息扩散到整个项目
+
+推荐在回调或适配器中立即把消息转换成应用状态：
+
+```python
+def make_snapshot(message: LowState) -> RobotSnapshot:
+    rpy = message.imu_state.rpy
+    if len(rpy) != 3:
+        raise ValueError(f"expected 3 RPY values, got {len(rpy)}")
+    return RobotSnapshot(
+        fsm_id=message.mode_machine,
+        roll_rad=rpy[0],
+        pitch_rad=rpy[1],
+        received_at_s=time.monotonic(),
+    )
+```
+
+这样做有三个直接好处：
+
+1. 业务层不依赖 pybind11 对象的复制和生命周期细节；
+2. 单元测试可以直接构造 `RobotSnapshot`，不需要 Linux 扩展；
+3. 可以明确只保留需要的字段，减少跨线程共享数据量。
+
+构造低层消息时则反向转换：先用应用配置创建完整消息，再验证定长数组，最后更新 CRC。完整示例见 [`examples/g1_build_lowcmd.py`](../examples/g1_build_lowcmd.py)。这个示例不初始化 DDS，也不会向机器人发送数据。
+
+### 状态码和异常是两条不同的错误通道
+
+binding 中的错误主要分为两类：
+
+| 错误来源 | 表现形式 | 处理方式 |
+| --- | --- | --- |
+| Python/pybind11/初始化错误 | 抛出异常 | 在合适的 `try/except` 边界捕获 |
+| 机器人服务拒绝或业务失败 | 返回非零 `status` | 每次调用后显式检查 |
+
+下面的代码不能正确处理机器人拒绝：
+
+```python
+try:
+    client.execute_action(15)
+except Exception:
+    print("action failed")
+```
+
+`execute_action()` 很可能正常返回一个非零整数，并不会抛异常。推荐统一定义状态异常：
+
+```python
+class SdkStatusError(RuntimeError):
+    def __init__(self, operation: str, status: int) -> None:
+        super().__init__(f"{operation} failed with status {status}")
+        self.operation = operation
+        self.status = status
+
+
+def require_ok(status: int, operation: str) -> None:
+    if status != 0:
+        raise SdkStatusError(operation, status)
+```
+
+直接返回状态码的方法这样使用：
+
+```python
+require_ok(client.execute_action(15), "execute arm action 15")
+```
+
+带一个输出值的方法可以使用泛型辅助函数：
+
+```python
+from typing import TypeVar
+
+ValueT = TypeVar("ValueT")
+
+
+def require_value(result: tuple[int, ValueT], operation: str) -> ValueT:
+    status, value = result
+    if status != 0:
+        raise SdkStatusError(operation, status)
+    return value
+
+
+fsm_id = require_value(client.get_fsm_id(), "get FSM ID")
+```
+
+不要丢失原始状态码。已知错误可以在更高一层翻译成人类可读信息，未知错误仍要记录具体整数，方便对照目标型号 SDK 的错误定义。
+
+### `try` 应该放在哪里？
+
+不要给每一行代码套一个 `try/except`，也不要把整个程序塞进一个捕获后什么都不做的大 `except`。推荐四个明确边界：
+
+| 边界 | 作用 |
+| --- | --- |
+| `run()` 中的 `try/finally` | 无论业务成功还是异常，都释放已启动资源 |
+| `main()` 中的 `try/except` | 把已知错误、Ctrl+C 和未知异常转换成退出码与日志 |
+| DDS callback 中的 `try/except` | 防止异常逃出 C++ 工作线程边界 |
+| 单个清理操作周围的窄 `try` | 一个清理失败时，仍尝试清理后续资源 |
+
+禁止下面这种写法：
+
+```python
+try:
+    run_everything()
+except Exception:
+    pass
+```
+
+它会让程序看起来“没有报错”，但机器人命令可能已经部分执行，资源也可能没有释放。
+
+只有在当前层能够增加信息、恢复、重试或转换错误时才捕获异常。否则让异常继续到 `main()`，由入口统一记录完整堆栈。
+
+### 标准 `main()` 和 `run()` 骨架
+
+推荐让 `main()` 只负责五件事：配置日志、解析参数、调用 `run()`、处理顶层异常、返回退出码。
+
+```python
+import logging
+
+from unitree_sdk2_cpp import channel
+from unitree_sdk2_cpp.robot.g1 import LocoClient
+
+
+logger = logging.getLogger(__name__)
+
+
+def run(config: AppConfig) -> int:
+    channel_ready = False
+    try:
+        channel.initialize(config.domain_id, config.interface)
+        channel_ready = True
+
+        client = LocoClient()
+        client.init()
+        client.set_timeout(config.timeout_s)
+
+        status, fsm_id = client.get_fsm_id()
+        require_ok(status, "get FSM ID")
+        logger.info("current FSM ID: %d", fsm_id)
+        return 0
+    finally:
+        if channel_ready:
+            channel.release()
+
+
+def main() -> int:
+    logging.basicConfig(level=logging.INFO)
+    try:
+        return run(parse_args())
+    except KeyboardInterrupt:
+        logger.info("interrupted")
+        return 130
+    except SdkStatusError as error:
+        logger.error("%s", error)
+        return 1
+    except Exception:
+        logger.exception("unexpected failure")
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+```
+
+这里的 `if __name__ == "__main__"` 非常重要。任何 DDS 初始化和硬件调用都不能发生在模块导入阶段，否则编辑器、测试程序或其他模块只做 `import` 时也可能连接设备。
+
+`raise SystemExit(main())` 会把 `main()` 返回的整数传给 shell：
+
+| 返回值 | 建议含义 |
+| ---: | --- |
+| `0` | 正常完成或由用户在执行前取消 |
+| `1` | SDK、配置或业务失败 |
+| `2` | `argparse` 参数错误 |
+| `130` | 用户按 Ctrl+C 中断 |
+
+完整的只读实现见 [`examples/g1_read_only_status.py`](../examples/g1_read_only_status.py)。
+
+### 资源必须记录“是否真正启动”
+
+构造 Python 对象不等于底层资源已经成功启动。初始化可能在任何一步失败，因此推荐分别保存状态：
+
+```python
+channel_ready = False
+subscriber_ready = False
+subscriber = None
+
+try:
+    channel.initialize(0, "eth0")
+    channel_ready = True
+
+    subscriber = channel.ChannelSubscriber(...)
+    subscriber.init_channel()
+    subscriber_ready = True
+finally:
+    if subscriber is not None and subscriber_ready:
+        subscriber.close_channel()
+    if channel_ready:
+        channel.release()
+```
+
+如果存在多个资源，按创建顺序的反方向关闭：
+
+```text
+初始化：channel -> subscriber -> publisher -> 业务线程
+关闭：业务线程 -> publisher -> subscriber -> channel
+```
+
+这能保证 callback 已经停止后才销毁它使用的共享状态，并保证全局 DDS 是最后释放的资源。
+
+### Client、Publisher 和 Subscriber 的生命周期不同
+
+| 对象 | 启动方法 | 关闭方法 |
+| --- | --- | --- |
+| 全局 Channel | `channel.initialize()` | `channel.release()` |
+| Publisher | `init_channel()` | `close_channel()` |
+| Subscriber | `init_channel()` | `close_channel()` |
+| Robot Client | `init()` | 当前没有统一 `close()` |
+
+Client 没有统一 `close()` 不表示可以忽略全局生命周期。它必须在 `channel.initialize()` 之后使用，`channel.release()` 之后不能继续调用。
+
+### 回调只负责交接数据
+
+DDS callback 运行在 SDK 工作线程中。适合在 callback 里做的事情只有：
+
+1. 验证 CRC 或基本结构；
+2. 提取少量必要字段；
+3. 更新一个带锁的最新快照，或放入有上限的队列；
+4. 捕获并记录异常；
+5. 尽快返回。
+
+不要在 callback 中执行 Client 请求、睡眠、模型推理、磁盘写入或等待另一个线程。下面是推荐的最新状态交接方式：
+
+```python
+class LatestState:
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self._ready = threading.Event()
+        self._value: RobotSnapshot | None = None
+
+    def update(self, value: RobotSnapshot) -> None:
+        with self._lock:
+            self._value = value
+            self._ready.set()
+
+    def get(self) -> RobotSnapshot | None:
+        with self._lock:
+            return self._value
+```
+
+完整实现见 [`examples/g1_state_monitor.py`](../examples/g1_state_monitor.py)。它还演示了 CRC 校验、首帧超时、断连检查和 `time.monotonic()`。
+
+### 使用单调时钟和有界等待
+
+持续时间、超时和循环节拍使用 `time.monotonic()`，不要使用可能因系统校时而跳变的 `time.time()`：
+
+```python
+deadline = time.monotonic() + timeout_s
+while time.monotonic() < deadline:
+    ...
+```
+
+任何网络等待、事件等待和队列读取都应有超时。循环中不能无条件忙等；没有数据时使用 `Event.wait()`、`Queue.get(timeout=...)` 或短暂 `sleep()`。
+
+Python 调度不是硬实时。Python 适合状态机、任务编排、动作调用和低频监控，不应用于需要严格周期保证的正式电机控制环。
+
+### 通信资源释放不等于机器人安全收尾
+
+`close_channel()` 和 `channel.release()` 只负责结束本程序的通信资源，不保证机器人进入某个机械状态。
+
+同样，不能在所有程序的 `finally` 中无条件调用：
+
+- `damp()`；
+- `zero_torque()`；
+- `stop_move()`；
+- 动作 `99`；
+- `stop_custom_action()`。
+
+这些都是可能改变实体机器人状态的命令，不是通用析构函数。例如失去力矩可能让未吊装的机器人跌倒，`stop_custom_action()` 也只针对自定义动作。
+
+正确做法是为每一种控制模式单独定义并验证收尾策略：
+
+```text
+通信清理：所有程序都必须执行，规则固定
+机械收尾：根据 FSM、控制权、姿态和现场方案决定
+物理急停：独立于 Python 程序，软件调用不能替代
+```
+
+### 测试分层
+
+测试也要按风险分层：
+
+| 层级 | 可以做什么 | 默认 CI |
+| --- | --- | --- |
+| 纯单元测试 | dataclass、参数范围、状态机、fake | 允许 |
+| DDS 测试 | 自定义 topic、类型注册、回环 | 默认关闭或显式标记 `dds` |
+| 硬件只读测试 | 订阅状态、只读 Client 查询 | 标记 `hardware`，人工启用 |
+| 运动测试 | 任何可能改变机械状态的调用 | 同时标记 `hardware` 和 `motion`，现场启用 |
+
+业务层应该依赖最小 `Protocol`，测试时注入 fake，而不是让单元测试创建真实 Client。不要通过 `Any`、`getattr()` 或忽略类型错误绕过接口边界。
+
+### 仓库示例应该按什么顺序学习？
+
+| 示例 | 连接 DDS | 连接机器人 | 风险与用途 |
+| --- | --- | --- | --- |
+| [`g1_build_lowcmd.py`](../examples/g1_build_lowcmd.py) | 否 | 否 | 纯内存消息、数组写回和 CRC |
+| [`dds_string_roundtrip.py`](../examples/dds_string_roundtrip.py) | 是 | 否 | 自定义 topic、回调交接和逆序关闭 |
+| [`g1_read_only_status.py`](../examples/g1_read_only_status.py) | 是 | 是 | 只读 Client、状态码和标准 `main()` |
+| [`g1_state_monitor.py`](../examples/g1_state_monitor.py) | 是 | 是 | 只读订阅、不可变快照、CRC 和断连 |
+| [`g1_arm_action.py`](../examples/g1_arm_action.py) | 是 | 是 | 实体运动；含确认，但仍需现场安全方案 |
+| [`g1_low_level_hold.py`](../examples/g1_low_level_hold.py) | 是 | 是 | 默认只读；`--send` 是高风险低层控制 |
+| [`g1_minimal.py`](../examples/g1_minimal.py) | 是 | 是 | 极简结构说明，会发布 `rt/lowcmd`，不要用于正式项目 |
+
+推荐先运行不连接硬件的两个示例：
+
+```bash
+python examples/g1_build_lowcmd.py
+python examples/dds_string_roundtrip.py --network eth0
+```
+
+后两个只读 G1 示例仍要求正确网络、匹配的 Linux 扩展和现场授权：
+
+```bash
+python examples/g1_read_only_status.py --network eth0
+python examples/g1_state_monitor.py --network eth0 --seconds 10
+```
+
+不要把自定义 topic 示例中的名称替换成 `rt/lowcmd` 或其他控制主题。
+
+### 开发提交前检查清单
+
+- [ ] 导入模块不会初始化 DDS、启动线程或发送命令；
+- [ ] 配置在连接设备前完成范围检查；
+- [ ] 时间、角度、速度和距离字段名包含单位；
+- [ ] 没有忽略 Client 返回的状态码；
+- [ ] 输出参数按 `status, value` 解包；
+- [ ] DDS 数组和嵌套消息按“读取、修改、完整写回”处理；
+- [ ] G1 低层命令发布前更新 CRC，状态处理前验证 CRC；
+- [ ] callback 捕获异常、快速返回且不执行机器人动作；
+- [ ] callback 与主线程之间使用锁、Event 或有界队列；
+- [ ] Publisher/Subscriber 在 Channel 之前关闭；
+- [ ] Ctrl+C 返回明确退出码；
+- [ ] 未知异常记录完整堆栈；
+- [ ] 机械收尾策略与具体控制模式匹配；
+- [ ] 默认测试和 CI 不初始化 DDS、不连接硬件、不执行运动；
+- [ ] Pyright 或 Mypy strict 检查通过。
+
+---
+
 ## 运动 API 的安全边界
 
 ### 为什么编辑器能看到 `move()`，但仍然不能直接试跑？
@@ -2571,7 +2999,7 @@ sha256sum \
 
 这一节用于定位模块，不替代 IDE 中的完整 `.pyi` 签名和 `api_manifest.json`。
 全部函数签名、每个参数、返回值、C++ 来源和用法见
-[完整 API 参考](API_REFERENCE_ZH.md)。
+[完整 API 参考总索引](API_REFERENCE_ZH.md)，再从索引进入对应模块分卷。
 
 ### 顶层 API
 

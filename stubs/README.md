@@ -63,5 +63,6 @@ does not make `import unitree_sdk2_cpp` executable without the Linux extension.
 Installing the real extension alongside this wheel supplies the runtime.
 
 The repository also provides a [Chinese beginner guide](../docs/BEGINNER_GUIDE_ZH.md)
-and an exhaustive [Chinese API reference](../docs/API_REFERENCE_ZH.md) covering
-every generated function, overload, property, parameter, and return value.
+and an exhaustive [Chinese API reference index](../docs/API_REFERENCE_ZH.md).
+The reference is split into 16 module pages under `docs/api/` and covers every
+generated function, overload, property, parameter, and return value.
