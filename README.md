@@ -184,12 +184,18 @@ the warnings in each file before running it against a physical robot:
 - `g1_read_only_status.py` demonstrates Client status handling and a structured
   `main()` without sending a motion command;
 - `g1_state_monitor.py` demonstrates an immutable callback-to-main snapshot;
+- `go2_service_list.py` and `go2_vui_status.py` query Go2 services and VUI settings;
+- `go2_state_monitor.py` subscribes to Go2 sport state without sending commands;
+- `go2_sport.py` runs an explicitly selected high-level Go2 action or timed move;
 - `g1_arm_action.py`, `g1_low_level_hold.py`, and `g1_minimal.py` cross the
   physical-motion boundary in some or all modes and require a separate safety
   procedure.
 
 The beginner guide contains the complete coding conventions for data models,
 exceptions, status codes, callbacks, lifecycle, shutdown, and test isolation.
+
+See [Go2 examples and commands (Chinese)](examples/GO2_EXAMPLES_ZH.md) for a
+step-by-step introduction to the four Go2 scripts.
 
 ## Documentation
 
