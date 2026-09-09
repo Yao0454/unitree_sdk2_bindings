@@ -670,7 +670,7 @@ value = ConfigDelParameter()
 <a id="unitree-sdk2-cpp-robot-b2-configdelparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigDelParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -714,7 +714,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configdelparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigDelParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -825,7 +825,7 @@ value = ConfigGetData()
 <a id="unitree-sdk2-cpp-robot-b2-configgetdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigGetData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -869,7 +869,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configgetdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigGetData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -980,7 +980,7 @@ value = ConfigGetParameter()
 <a id="unitree-sdk2-cpp-robot-b2-configgetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigGetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1024,7 +1024,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configgetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigGetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1205,7 +1205,7 @@ value = ConfigMetaData()
 <a id="unitree-sdk2-cpp-robot-b2-configmetadata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigMetaData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1249,7 +1249,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configmetadata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigMetaData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1360,7 +1360,7 @@ value = ConfigMetaParameter()
 <a id="unitree-sdk2-cpp-robot-b2-configmetaparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigMetaParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1404,7 +1404,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configmetaparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigMetaParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1516,7 +1516,7 @@ value = ConfigSetParameter()
 <a id="unitree-sdk2-cpp-robot-b2-configsetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigSetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1560,7 +1560,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-configsetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ConfigSetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1826,7 +1826,7 @@ value = JsonizeConfigMeta()
 <a id="unitree-sdk2-cpp-robot-b2-jsonizeconfigmeta-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeConfigMeta.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1870,7 +1870,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-jsonizeconfigmeta-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeConfigMeta.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1982,7 +1982,7 @@ value = JsonizeModeName()
 <a id="unitree-sdk2-cpp-robot-b2-jsonizemodename-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeModeName.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2026,7 +2026,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-jsonizemodename-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeModeName.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2137,7 +2137,7 @@ value = JsonizeSilent()
 <a id="unitree-sdk2-cpp-robot-b2-jsonizesilent-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeSilent.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2181,7 +2181,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-jsonizesilent-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.JsonizeSilent.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2292,7 +2292,7 @@ value = LowPowerStatusData()
 <a id="unitree-sdk2-cpp-robot-b2-lowpowerstatusdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.LowPowerStatusData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2336,7 +2336,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-lowpowerstatusdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.LowPowerStatusData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2447,7 +2447,7 @@ value = LowPowerSwitchParameter()
 <a id="unitree-sdk2-cpp-robot-b2-lowpowerswitchparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.LowPowerSwitchParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2491,7 +2491,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-lowpowerswitchparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.LowPowerSwitchParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2949,7 +2949,7 @@ value = PkgVersionData()
 <a id="unitree-sdk2-cpp-robot-b2-pkgversiondata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.PkgVersionData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2993,7 +2993,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-pkgversiondata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.PkgVersionData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3572,7 +3572,7 @@ value = ServiceStateData()
 <a id="unitree-sdk2-cpp-robot-b2-servicestatedata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceStateData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3616,7 +3616,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-servicestatedata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceStateData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3728,7 +3728,7 @@ value = ServiceSwitchData()
 <a id="unitree-sdk2-cpp-robot-b2-serviceswitchdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceSwitchData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3772,7 +3772,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-serviceswitchdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceSwitchData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3884,7 +3884,7 @@ value = ServiceSwitchParameter()
 <a id="unitree-sdk2-cpp-robot-b2-serviceswitchparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceSwitchParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3928,7 +3928,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-serviceswitchparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.ServiceSwitchParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4040,7 +4040,7 @@ value = SetReportFreqParameter()
 <a id="unitree-sdk2-cpp-robot-b2-setreportfreqparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.SetReportFreqParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4084,7 +4084,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-b2-setreportfreqparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.b2.SetReportFreqParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 

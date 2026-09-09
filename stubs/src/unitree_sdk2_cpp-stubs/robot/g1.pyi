@@ -8,281 +8,2066 @@ from typing import Any, overload
 from . import Client, ClientBase
 
 class InternalFsmMode(enum.IntEnum):
+    """SDK 整数枚举。枚举成员和值以目标版本头文件为准。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import InternalFsmMode
+    """
     LAST = ...
     PASSIVE = ...
     WALKRUN = ...
 
 class AgvClient(Client):
+    """Robot 服务客户端。构造、初始化和具体方法的可用性必须分别检查。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import AgvClient
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::AgvClient::AgvClient()."""
+        """初始化 `AgvClient` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = AgvClient()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: AgvClient()
+        """
         ...
     def init(self) -> None:
-        """AVAILABLE | INITIALIZATION | DIRECT. C++: Init()."""
+        """初始化当前 SDK 对象所需的底层通道或服务资源。
+
+        可用性：AVAILABLE；分类：INITIALIZATION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.init()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: Init()
+        """
         ...
     def move(self, vx: float, vy: float, vyaw: float) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Move(float, float, float)."""
+        """对应 C++ SDK 操作 `Move(float, float, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            vx: X 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vx: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vy: Y 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vy: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vyaw: 偏航角速度参数。单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vyaw: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.move(vx=vx, vy=vy, vyaw=vyaw)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Move(float, float, float)
+        """
         ...
     def height_adjust(self, vz: float) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: HeightAdjust(float)."""
+        """对应 C++ SDK 操作 `HeightAdjust(float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            vz: 传给该接口的 `vz` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `vz: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.height_adjust(vz=vz)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: HeightAdjust(float)
+        """
         ...
 
 class AudioClient(Client):
+    """Robot 服务客户端。构造、初始化和具体方法的可用性必须分别检查。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import AudioClient
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::AudioClient::AudioClient()."""
+        """初始化 `AudioClient` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = AudioClient()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: AudioClient()
+        """
         ...
     def init(self) -> None:
-        """AVAILABLE | INITIALIZATION | DIRECT. C++: Init()."""
+        """初始化当前 SDK 对象所需的底层通道或服务资源。
+
+        可用性：AVAILABLE；分类：INITIALIZATION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.init()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: Init()
+        """
         ...
     def tts_maker(self, text: str, speaker_id: int) -> int:
-        """AVAILABLE | HARDWARE_SIDE_EFFECT | DIRECT. C++: TtsMaker(const std::string &, int32_t)."""
+        """请求 G1 把指定文字转换为语音并播放。
+
+        可用性：AVAILABLE；分类：HARDWARE_SIDE_EFFECT。
+
+        Args:
+            text: 要处理的文本内容；编码、长度和语言支持由目标服务决定。 对应 C++ 参数 `text: const std::string &`。 底层为字符串；长度、编码和允许值由具体协议决定。
+            speaker_id: 语音合成说话人 ID。有效编号由机器人音频服务和固件决定。 对应 C++ 参数 `speaker_id: int32_t`。 取值范围为 -2147483648 到 2147483647。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.tts_maker(text=text, speaker_id=speaker_id)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: TtsMaker(const std::string &, int32_t)
+        """
         ...
     def get_volume(self) -> tuple[int, int]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetVolume(uint8_t &)."""
+        """查询或检查 音量。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `volume` (int): 传给该接口的 音量 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `volume: uint8_t &`。 取值范围为 0 到 255。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, volume = obj.get_volume()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetVolume(uint8_t &)
+        """
         ...
     def set_volume(self, volume: int) -> int:
-        """AVAILABLE | HARDWARE_SIDE_EFFECT | DIRECT. C++: SetVolume(uint8_t)."""
+        """设置 音量。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：HARDWARE_SIDE_EFFECT。
+
+        Args:
+            volume: 传给该接口的 音量 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `volume: uint8_t`。 取值范围为 0 到 255。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_volume(volume=volume)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: SetVolume(uint8_t)
+        """
         ...
     def play_stream(self, app_name: str, stream_id: str, pcm_data: Sequence[int]) -> int:
-        """AVAILABLE | HARDWARE_SIDE_EFFECT | DIRECT. C++: PlayStream(std::string, std::string, std::vector<uint8_t>)."""
+        """对应 C++ SDK 操作 `PlayStream(std::string, std::string, std::vector<uint8_t>)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：HARDWARE_SIDE_EFFECT。
+
+        Args:
+            app_name: 应用名称，用于标识音频流或播放会话。允许值和命名规则以目标服务协议为准。 对应 C++ 参数 `app_name: std::string`。 底层为字符串；长度、编码和允许值由具体协议决定。
+            stream_id: 音频流标识符，用于区分同一应用下的播放流。 对应 C++ 参数 `stream_id: std::string`。 底层为字符串；长度、编码和允许值由具体协议决定。
+            pcm_data: 传给该接口的 `pcm` 数据 参数，Python 类型为 `Sequence[int]`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `pcm_data: std::vector<uint8_t>`。 底层是可变长度 vector；元素约束：取值范围为 0 到 255。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.play_stream(app_name=app_name, stream_id=stream_id, pcm_data=pcm_data)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: PlayStream(std::string, std::string, std::vector<uint8_t>)
+        """
         ...
     def play_stop(self, app_name: str) -> int:
-        """AVAILABLE | HARDWARE_SIDE_EFFECT | DIRECT. C++: PlayStop(std::string)."""
+        """对应 C++ SDK 操作 `PlayStop(std::string)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：HARDWARE_SIDE_EFFECT。
+
+        Args:
+            app_name: 应用名称，用于标识音频流或播放会话。允许值和命名规则以目标服务协议为准。 对应 C++ 参数 `app_name: std::string`。 底层为字符串；长度、编码和允许值由具体协议决定。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.play_stop(app_name=app_name)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: PlayStop(std::string)
+        """
         ...
     def led_control(self, r: int, g: int, b: int) -> int:
-        """AVAILABLE | HARDWARE_SIDE_EFFECT | DIRECT. C++: LedControl(uint8_t, uint8_t, uint8_t)."""
+        """对应 C++ SDK 操作 `LedControl(uint8_t, uint8_t, uint8_t)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：HARDWARE_SIDE_EFFECT。
+
+        Args:
+            r: 传给该接口的 `r` 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `R: uint8_t`。 取值范围为 0 到 255。
+            g: 传给该接口的 `g` 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `G: uint8_t`。 取值范围为 0 到 255。
+            b: 传给该接口的 `b` 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `B: uint8_t`。 取值范围为 0 到 255。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.led_control(r=r, g=g, b=b)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: LedControl(uint8_t, uint8_t, uint8_t)
+        """
         ...
 
 class G1ArmActionClient(Client):
+    """Robot 服务客户端。构造、初始化和具体方法的可用性必须分别检查。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import G1ArmActionClient
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::G1ArmActionClient::G1ArmActionClient()."""
+        """初始化 `G1ArmActionClient` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = G1ArmActionClient()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: G1ArmActionClient()
+        """
         ...
     action_map: dict[str, int]
+    """G1ArmActionClient.action_map：公开字段，类型为 dict[str, int]。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def init(self) -> None:
-        """AVAILABLE | INITIALIZATION | DIRECT. C++: Init()."""
+        """初始化当前 SDK 对象所需的底层通道或服务资源。
+
+        可用性：AVAILABLE；分类：INITIALIZATION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.init()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: Init()
+        """
         ...
     @overload
     def execute_action(self, action_id: int) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: ExecuteAction(int32_t)."""
+        """按动作 ID 或自定义名称执行 G1 机械臂动作。先查询动作列表确认目标。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            action_id: 从 get_action_list() 查询并确认的动作 ID。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            # action_id 已从设备动作列表或自定义配置中确认
+            code = client.execute_action(action_id)
+            if code != 0:
+                raise RuntimeError(f'执行失败: {code}')
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: ExecuteAction(int32_t)
+        """
         ...
     @overload
     def execute_action(self, action_name: str) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: ExecuteAction(const std::string &)."""
+        """按动作 ID 或自定义名称执行 G1 机械臂动作。先查询动作列表确认目标。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            action_name: 已在机器人端配置的自定义动作名称。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            # action_name 已从设备动作列表或自定义配置中确认
+            code = client.execute_action(action_name)
+            if code != 0:
+                raise RuntimeError(f'执行失败: {code}')
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: ExecuteAction(const std::string &)
+        """
         ...
     def stop_custom_action(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: StopCustomAction()."""
+        """请求停止当前自定义机械臂动作；不保证停止所有内置动作。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.stop_custom_action()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: StopCustomAction()
+        """
         ...
     def get_action_list(self) -> tuple[int, str]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetActionList(std::string &)."""
+        """查询 G1 当前支持的机械臂动作，返回服务提供的原始字符串。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `data` (str): 传给该接口的 数据 参数，Python 类型为 `str`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `data: std::string &`。 底层为字符串；长度、编码和允许值由具体协议决定。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            code, actions = client.get_action_list()
+            if code != 0:
+                raise RuntimeError(f'查询失败: {code}')
+            print(actions)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetActionList(std::string &)
+        """
         ...
 
 class JsonizeDataVecFloat(object):
+    """SDK 类型签名预览。请逐项查看构造函数和方法的可用性。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import JsonizeDataVecFloat
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::JsonizeDataVecFloat::JsonizeDataVecFloat()."""
+        """初始化 `JsonizeDataVecFloat` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = JsonizeDataVecFloat()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: JsonizeDataVecFloat()
+        """
         ...
     data: list[float]
+    """JsonizeDataVecFloat.data：公开字段，类型为 list[float]。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 class JsonizeVelocityCommand(object):
+    """SDK 类型签名预览。请逐项查看构造函数和方法的可用性。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import JsonizeVelocityCommand
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::JsonizeVelocityCommand::JsonizeVelocityCommand()."""
+        """初始化 `JsonizeVelocityCommand` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = JsonizeVelocityCommand()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: JsonizeVelocityCommand()
+        """
         ...
     velocity: list[float]
+    """JsonizeVelocityCommand.velocity：公开字段，类型为 list[float]。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     duration: float
+    """JsonizeVelocityCommand.duration：公开字段，类型为 float。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 class LedControlParameter(object):
+    """SDK 请求参数值类型；当前可能仅提供设计期签名。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import LedControlParameter
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::LedControlParameter::LedControlParameter()."""
+        """初始化 `LedControlParameter` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = LedControlParameter()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: LedControlParameter()
+        """
         ...
     r: int
+    """LedControlParameter.r：公开字段，类型为 int。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     g: int
+    """LedControlParameter.g：公开字段，类型为 int。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     b: int
+    """LedControlParameter.b：公开字段，类型为 int。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 class LocoClient(Client):
+    """Robot 服务客户端。构造、初始化和具体方法的可用性必须分别检查。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import LocoClient
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::LocoClient::LocoClient()."""
+        """初始化 `LocoClient` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = LocoClient()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: LocoClient()
+        """
         ...
     def init(self) -> None:
-        """AVAILABLE | INITIALIZATION | DIRECT. C++: Init()."""
+        """初始化当前 SDK 对象所需的底层通道或服务资源。
+
+        可用性：AVAILABLE；分类：INITIALIZATION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.init()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: Init()
+        """
         ...
     def get_fsm_id(self) -> tuple[int, int]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetFsmId(int &)."""
+        """查询 G1 当前 FSM 状态编号。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `fsm_id` (int): 传给该接口的 FSM ID 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `fsm_id: int &`。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            code, fsm_id = client.get_fsm_id()
+            if code != 0:
+                raise RuntimeError(f'查询失败: {code}')
+            print(fsm_id)
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetFsmId(int &)
+        """
         ...
     def get_fsm_mode(self) -> tuple[int, int]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetFsmMode(int &)."""
+        """查询 G1 当前 FSM 模式。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `fsm_mode` (int): 传给该接口的 FSM 模式 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `fsm_mode: int &`。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, fsm_mode = obj.get_fsm_mode()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetFsmMode(int &)
+        """
         ...
     def get_balance_mode(self) -> tuple[int, int]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetBalanceMode(int &)."""
+        """查询或检查 平衡 模式。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `balance_mode` (int): 传给该接口的 平衡 模式 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `balance_mode: int &`。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, balance_mode = obj.get_balance_mode()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetBalanceMode(int &)
+        """
         ...
     def get_swing_height(self) -> tuple[int, float]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetSwingHeight(float &)."""
+        """查询或检查 `swing` 高度。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `swing_height` (float): 传给该接口的 `swing` 高度 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `swing_height: float &`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, swing_height = obj.get_swing_height()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetSwingHeight(float &)
+        """
         ...
     def get_stand_height(self) -> tuple[int, float]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetStandHeight(float &)."""
+        """查询或检查 `stand` 高度。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `stand_height` (float): 传给该接口的 `stand` 高度 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `stand_height: float &`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, stand_height = obj.get_stand_height()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetStandHeight(float &)
+        """
         ...
     def get_phase(self) -> tuple[int, list[float]]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetPhase(std::vector<float> &)."""
+        """查询或检查 相位。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `phase` (list[float]): 传给该接口的 相位 参数，Python 类型为 `list[float]`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `phase: std::vector<float> &`。 底层是可变长度 vector；元素约束：底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, phase = obj.get_phase()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetPhase(std::vector<float> &)
+        """
         ...
     def set_fsm_id(self, fsm_id: int) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetFsmId(int)."""
+        """请求切换 G1 FSM 状态。目标编号含义取决于固件，切换可能引发运动。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            fsm_id: 传给该接口的 FSM ID 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `fsm_id: int`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_fsm_id(fsm_id=fsm_id)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetFsmId(int)
+        """
         ...
     def set_balance_mode(self, balance_mode: int) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetBalanceMode(int)."""
+        """设置 平衡 模式。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            balance_mode: 传给该接口的 平衡 模式 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `balance_mode: int`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_balance_mode(balance_mode=balance_mode)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetBalanceMode(int)
+        """
         ...
     def set_swing_height(self, swing_height: float) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetSwingHeight(float)."""
+        """设置 `swing` 高度。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            swing_height: 传给该接口的 `swing` 高度 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `swing_height: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_swing_height(swing_height=swing_height)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetSwingHeight(float)
+        """
         ...
     def set_stand_height(self, stand_height: float) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetStandHeight(float)."""
+        """设置 `stand` 高度。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            stand_height: 传给该接口的 `stand` 高度 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `stand_height: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_stand_height(stand_height=stand_height)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetStandHeight(float)
+        """
         ...
     def set_velocity(self, vx: float, vy: float, omega: float, duration: float = 1.0) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetVelocity(float, float, float, float)."""
+        """设置 速度。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            vx: X 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vx: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vy: Y 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vy: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            omega: 角速度参数。旋转轴、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `omega: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            duration: 操作持续时间参数。精确单位、范围和默认行为以目标型号接口定义为准。 对应 C++ 参数 `duration: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_velocity(vx=vx, vy=vy, omega=omega, duration=duration)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetVelocity(float, float, float, float)
+        """
         ...
     def set_task_id(self, task_id: int) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetTaskId(int)."""
+        """设置 任务 ID。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            task_id: 传给该接口的 任务 ID 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `task_id: int`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_task_id(task_id=task_id)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetTaskId(int)
+        """
         ...
     def switch_to_user_ctrl(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SwitchToUserCtrl()."""
+        """对应 C++ SDK 操作 `SwitchToUserCtrl()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.switch_to_user_ctrl()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SwitchToUserCtrl()
+        """
         ...
     def switch_to_internal_ctrl(self, mode: InternalFsmMode) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SwitchToInternalCtrl(unitree::robot::g1::InternalFsmMode)."""
+        """对应 C++ SDK 操作 `SwitchToInternalCtrl(unitree::robot::g1::InternalFsmMode)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            mode: 传给该接口的 模式 参数，Python 类型为 `InternalFsmMode`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `mode: unitree::robot::g1::InternalFsmMode`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.switch_to_internal_ctrl(mode=mode)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SwitchToInternalCtrl(unitree::robot::g1::InternalFsmMode)
+        """
         ...
     def damp(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Damp()."""
+        """对应 C++ SDK 操作 `Damp()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.damp()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Damp()
+        """
         ...
     def start(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Start()."""
+        """启动对应 SDK 操作。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.start()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Start()
+        """
         ...
     def squat(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Squat()."""
+        """对应 C++ SDK 操作 `Squat()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.squat()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Squat()
+        """
         ...
     def sit(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Sit()."""
+        """对应 C++ SDK 操作 `Sit()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.sit()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Sit()
+        """
         ...
     def stand_up(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: StandUp()."""
+        """对应 C++ SDK 操作 `StandUp()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.stand_up()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: StandUp()
+        """
         ...
     def zero_torque(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: ZeroTorque()."""
+        """对应 C++ SDK 操作 `ZeroTorque()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.zero_torque()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: ZeroTorque()
+        """
         ...
     def stop_move(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: StopMove()."""
+        """请求停止对应 SDK 操作。该名称不等同于经过验证的物理急停。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.stop_move()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: StopMove()
+        """
         ...
     def high_stand(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: HighStand()."""
+        """对应 C++ SDK 操作 `HighStand()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.high_stand()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: HighStand()
+        """
         ...
     def low_stand(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: LowStand()."""
+        """对应 C++ SDK 操作 `LowStand()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.low_stand()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: LowStand()
+        """
         ...
     @overload
     def move(self, vx: float, vy: float, vyaw: float, continous_move: bool) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Move(float, float, float, bool)."""
+        """对应 C++ SDK 操作 `Move(float, float, float, bool)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            vx: X 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vx: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vy: Y 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vy: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vyaw: 偏航角速度参数。单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vyaw: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            continous_move: 传给该接口的 `continous` `move` 参数，Python 类型为 `bool`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `continous_move: bool`。 只接受布尔语义。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.move(vx=vx, vy=vy, vyaw=vyaw, continous_move=continous_move)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Move(float, float, float, bool)
+        """
         ...
     @overload
     def move(self, vx: float, vy: float, vyaw: float) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: Move(float, float, float)."""
+        """对应 C++ SDK 操作 `Move(float, float, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            vx: X 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vx: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vy: Y 方向速度参数。坐标系、单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vy: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+            vyaw: 偏航角速度参数。单位、符号和安全范围必须查目标型号运动协议。 对应 C++ 参数 `vyaw: float`。 底层为浮点数；类型本身不说明单位、坐标系或业务安全范围。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.move(vx=vx, vy=vy, vyaw=vyaw)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: Move(float, float, float)
+        """
         ...
     def balance_stand(self) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: BalanceStand()."""
+        """对应 C++ SDK 操作 `BalanceStand()`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.balance_stand()
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: BalanceStand()
+        """
         ...
     def continuous_gait(self, flag: bool) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: ContinuousGait(bool)."""
+        """对应 C++ SDK 操作 `ContinuousGait(bool)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            flag: 布尔开关。`True` 和 `False` 的具体业务效果由当前方法定义。 对应 C++ 参数 `flag: bool`。 只接受布尔语义。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.continuous_gait(flag=flag)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: ContinuousGait(bool)
+        """
         ...
     def switch_move_mode(self, flag: bool) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SwitchMoveMode(bool)."""
+        """对应 C++ SDK 操作 `SwitchMoveMode(bool)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            flag: 布尔开关。`True` 和 `False` 的具体业务效果由当前方法定义。 对应 C++ 参数 `flag: bool`。 只接受布尔语义。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.switch_move_mode(flag=flag)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SwitchMoveMode(bool)
+        """
         ...
     def wave_hand(self, turn_flag: bool = False) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: WaveHand(bool)."""
+        """对应 C++ SDK 操作 `WaveHand(bool)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            turn_flag: 传给该接口的 `turn` `flag` 参数，Python 类型为 `bool`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `turn_flag: bool`。 只接受布尔语义。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.wave_hand(turn_flag=turn_flag)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: WaveHand(bool)
+        """
         ...
     def shake_hand(self, stage: int = -1) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: ShakeHand(int)."""
+        """对应 C++ SDK 操作 `ShakeHand(int)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            stage: 传给该接口的 `stage` 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `stage: int`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.shake_hand(stage=stage)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: ShakeHand(int)
+        """
         ...
     def set_speed_mode(self, speed_mode: int) -> int:
-        """AVAILABLE | MOTION_COMMAND | DIRECT. C++: SetSpeedMode(int)."""
+        """设置 速度 模式。具体副作用和安全边界见下方状态。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            speed_mode: 传给该接口的 速度 模式 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `speed_mode: int`。
+
+        Returns:
+            返回值 (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.set_speed_mode(speed_mode=speed_mode)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: SetSpeedMode(int)
+        """
         ...
     def get_mimic_motion(self) -> tuple[int, str]:
-        """AVAILABLE | READ_ONLY | OUTPUT_WRAPPER. C++: GetMimicMotion(std::string &)."""
+        """查询或检查 `mimic` `motion`。
+
+        可用性：AVAILABLE；分类：READ_ONLY。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `data` (str): 传给该接口的 数据 参数，Python 类型为 `str`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `data: std::string &`。 底层为字符串；长度、编码和允许值由具体协议决定。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, data = obj.get_mimic_motion()
+            ```
+
+        Notes:
+            服务调用前须初始化 DDS、构造客户端、设置超时并调用 init()。
+            C++: GetMimicMotion(std::string &)
+        """
         ...
     def _fsm_api(self, parameter: str) -> tuple[int, str]:
-        """AVAILABLE | MOTION_COMMAND | OUTPUT_WRAPPER. C++: _fsm_api(std::string, std::string &)."""
+        """对应 C++ SDK 操作 `_fsm_api(std::string, std::string &)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+        可用性：AVAILABLE；分类：MOTION_COMMAND。
+
+        Args:
+            parameter: 传给该接口的 `parameter` 参数，Python 类型为 `str`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `parameter: std::string`。 底层为字符串；长度、编码和允许值由具体协议决定。
+
+        Returns:
+            [0] `status` (int): SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务错误码解释。
+            [1] `data` (str): 传给该接口的 数据 参数，Python 类型为 `str`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。 对应 C++ 参数 `data: std::string &`。 底层为字符串；长度、编码和允许值由具体协议决定。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            status, data = obj._fsm_api(parameter=parameter)
+            ```
+
+        Notes:
+            会向实体机器人发送运动请求；仅在确认目标状态并准备停止手段后调用。
+            C++: _fsm_api(std::string, std::string &)
+        """
         ...
 
 class MoveParameter(object):
+    """SDK 请求参数值类型；当前可能仅提供设计期签名。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import MoveParameter
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::MoveParameter::MoveParameter()."""
+        """初始化 `MoveParameter` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = MoveParameter()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: MoveParameter()
+        """
         ...
     vx: float
+    """MoveParameter.vx：公开字段，类型为 float。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     vy: float
+    """MoveParameter.vy：公开字段，类型为 float。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     vyaw: float
+    """MoveParameter.vyaw：公开字段，类型为 float。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(unitree::common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: unitree::common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(unitree::common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(unitree::common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(unitree::common::JsonMap &) const
+        """
         ...
 
 class PlayStopParameter(object):
+    """SDK 请求参数值类型；当前可能仅提供设计期签名。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import PlayStopParameter
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::PlayStopParameter::PlayStopParameter()."""
+        """初始化 `PlayStopParameter` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = PlayStopParameter()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: PlayStopParameter()
+        """
         ...
     app_name: str
+    """PlayStopParameter.app_name：公开字段，类型为 str。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 class PlayStreamParameter(object):
+    """SDK 请求参数值类型；当前可能仅提供设计期签名。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import PlayStreamParameter
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::PlayStreamParameter::PlayStreamParameter()."""
+        """初始化 `PlayStreamParameter` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = PlayStreamParameter()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: PlayStreamParameter()
+        """
         ...
     app_name: str
+    """PlayStreamParameter.app_name：公开字段，类型为 str。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     stream_id: str
+    """PlayStreamParameter.stream_id：公开字段，类型为 str。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 class TtsMakerParameter(object):
+    """SDK 请求参数值类型；当前可能仅提供设计期签名。
+
+    导入：from unitree_sdk2_cpp.robot.g1 import TtsMakerParameter
+    构造可用性：AVAILABLE。
+    """
     def __init__(self) -> None:
-        """AVAILABLE; C++: unitree::robot::g1::TtsMakerParameter::TtsMakerParameter()."""
+        """初始化 `TtsMakerParameter` 实例。是否能实际构造取决于下方可用性状态。
+
+        可用性：AVAILABLE；分类：CONSTRUCTION。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            无 (None): `__init__` 本身不返回值；调用类对象时，在构造函数可用的前提下得到该类实例。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            value = TtsMakerParameter()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: TtsMakerParameter()
+        """
         ...
     index: int
+    """TtsMakerParameter.index：公开字段，类型为 int。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     speaker_id: int
+    """TtsMakerParameter.speaker_id：公开字段，类型为 int。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     text: str
+    """TtsMakerParameter.text：公开字段，类型为 str。
+    具体单位及允许值以对应 SDK 数据结构为准。
+    """
     def from_json(self, value: Mapping[str, Any]) -> None:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_INPUT. C++: fromJson(common::JsonMap &)."""
+        """从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            value: 要写入或传递的新值，必须符合该参数的 Python 类型以及底层 C++ 范围约束。 对应 C++ 参数 `json: common::JsonMap &`。
+
+        Returns:
+            无 (None): 该方法不返回 Python 值；失败可能表现为异常或底层状态变化。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            obj.from_json(value=value)
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: fromJson(common::JsonMap &)
+        """
         ...
     def to_json(self) -> dict[str, Any]:
-        """AVAILABLE | UNCLASSIFIED | JSON_DICT_OUTPUT. C++: toJson(common::JsonMap &) const."""
+        """把当前 SDK 值对象转换为 JSON 风格字典。
+
+        可用性：AVAILABLE；分类：UNCLASSIFIED。
+
+        Args:
+            无显式参数；实例方法的 self 由 Python 自动传入。
+
+        Returns:
+            返回值 (dict[str, Any]): 返回 `dict[str, Any]`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+        Examples:
+            用法片段；obj/client 和参数变量需先按业务准备。
+
+            ```python
+            result = obj.to_json()
+            ```
+
+        Notes:
+            stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+            C++: toJson(common::JsonMap &) const
+        """
         ...
 
 from ..channel import ChannelSubscriber
 from ..idl.g1 import BmsState, LowState
 
-def bad_orientation(low_state: LowState, limit_angle: float = 1.0) -> bool: ...
-def joint_vel_out_of_limit(low_state: LowState, limit_vel: float = 10.0) -> bool: ...
-def ang_vel_out_of_limit(low_state: LowState, limit_vel: float = 6.0) -> bool: ...
-def motor_winding_overheat(low_state: LowState, limit_temp: float = 120.0) -> bool: ...
-def motor_casing_overheat(low_state: LowState, limit_temp: float = 85.0) -> bool: ...
-def low_battery(bms_state: BmsState, limit_soc: float = 20.0) -> bool: ...
-def lost_connection(subscriber: ChannelSubscriber[LowState], timeout_ms: int = 1000) -> bool: ...
+def bad_orientation(low_state: LowState, limit_angle: float = 1.0) -> bool:
+    """对应 C++ SDK 操作 `bad_orientation(const unitree_hg::msg::dds_::LowState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        low_state: 传给该接口的 `low` 状态 参数，Python 类型为 `LowState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_angle: 传给该接口的 `limit` `angle` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = bad_orientation(low_state=low_state, limit_angle=limit_angle)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: bad_orientation(const unitree_hg::msg::dds_::LowState_ &, float)
+    """
+    ...
+def joint_vel_out_of_limit(low_state: LowState, limit_vel: float = 10.0) -> bool:
+    """对应 C++ SDK 操作 `joint_vel_out_of_limit(const unitree_hg::msg::dds_::LowState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        low_state: 传给该接口的 `low` 状态 参数，Python 类型为 `LowState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_vel: 传给该接口的 `limit` `vel` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = joint_vel_out_of_limit(low_state=low_state, limit_vel=limit_vel)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: joint_vel_out_of_limit(const unitree_hg::msg::dds_::LowState_ &, float)
+    """
+    ...
+def ang_vel_out_of_limit(low_state: LowState, limit_vel: float = 6.0) -> bool:
+    """对应 C++ SDK 操作 `ang_vel_out_of_limit(const unitree_hg::msg::dds_::LowState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        low_state: 传给该接口的 `low` 状态 参数，Python 类型为 `LowState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_vel: 传给该接口的 `limit` `vel` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = ang_vel_out_of_limit(low_state=low_state, limit_vel=limit_vel)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: ang_vel_out_of_limit(const unitree_hg::msg::dds_::LowState_ &, float)
+    """
+    ...
+def motor_winding_overheat(low_state: LowState, limit_temp: float = 120.0) -> bool:
+    """对应 C++ SDK 操作 `motor_winding_overheat(const unitree_hg::msg::dds_::LowState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        low_state: 传给该接口的 `low` 状态 参数，Python 类型为 `LowState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_temp: 传给该接口的 `limit` `temp` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = motor_winding_overheat(low_state=low_state, limit_temp=limit_temp)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: motor_winding_overheat(const unitree_hg::msg::dds_::LowState_ &, float)
+    """
+    ...
+def motor_casing_overheat(low_state: LowState, limit_temp: float = 85.0) -> bool:
+    """对应 C++ SDK 操作 `motor_casing_overheat(const unitree_hg::msg::dds_::LowState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        low_state: 传给该接口的 `low` 状态 参数，Python 类型为 `LowState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_temp: 传给该接口的 `limit` `temp` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = motor_casing_overheat(low_state=low_state, limit_temp=limit_temp)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: motor_casing_overheat(const unitree_hg::msg::dds_::LowState_ &, float)
+    """
+    ...
+def low_battery(bms_state: BmsState, limit_soc: float = 20.0) -> bool:
+    """对应 C++ SDK 操作 `low_battery(const unitree_hg::msg::dds_::BmsState_ &, float)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        bms_state: 传给该接口的 `bms` 状态 参数，Python 类型为 `BmsState`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        limit_soc: 传给该接口的 `limit` `soc` 参数，Python 类型为 `float`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = low_battery(bms_state=bms_state, limit_soc=limit_soc)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: low_battery(const unitree_hg::msg::dds_::BmsState_ &, float)
+    """
+    ...
+def lost_connection(subscriber: ChannelSubscriber[LowState], timeout_ms: int = 1000) -> bool:
+    """对应 C++ SDK 操作 `lost_connection(unitree::robot::ChannelSubscriberPtr<unitree_hg::msg::dds_::LowState_> &, int64_t)`。上游头文件没有可直接生成的业务说明时，本参考只保证签名映射，精确语义需查目标型号协议。
+
+    可用性：AVAILABLE；分类：SAFETY_CHECK。
+
+    Args:
+        subscriber: 传给该接口的 `subscriber` 参数，Python 类型为 `ChannelSubscriber[LowState]`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+        timeout_ms: 传给该接口的 超时 `ms` 参数，Python 类型为 `int`。精确含义、单位、范围和枚举值需查目标型号对应头文件与协议。
+
+    Returns:
+        返回值 (bool): 返回 `bool`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。
+
+    Examples:
+        用法片段；obj/client 和参数变量需先按业务准备。
+
+        ```python
+        result = lost_connection(subscriber=subscriber, timeout_ms=timeout_ms)
+        ```
+
+    Notes:
+        stub 提供类型和文档；执行此接口仍需要已安装的原生扩展。
+        C++: lost_connection(unitree::robot::ChannelSubscriberPtr<unitree_hg::msg::dds_::LowState_> &, int64_t)
+    """
+    ...

@@ -96,7 +96,7 @@ value = JsonizeDataVecFloat()
 <a id="unitree-sdk2-cpp-robot-h1-jsonizedatavecfloat-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeDataVecFloat.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -140,7 +140,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-h1-jsonizedatavecfloat-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeDataVecFloat.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -254,7 +254,7 @@ value = JsonizeTargetPos()
 <a id="unitree-sdk2-cpp-robot-h1-jsonizetargetpos-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeTargetPos.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -298,7 +298,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-h1-jsonizetargetpos-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeTargetPos.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -410,7 +410,7 @@ value = JsonizeVelocityCommand()
 <a id="unitree-sdk2-cpp-robot-h1-jsonizevelocitycommand-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeVelocityCommand.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -454,7 +454,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-h1-jsonizevelocitycommand-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.h1.JsonizeVelocityCommand.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 

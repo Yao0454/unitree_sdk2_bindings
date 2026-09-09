@@ -374,6 +374,22 @@ def load_cpp_members(
             (binding_root / "generated" / filename).read_text(encoding="utf-8")
         )
         for cpp_class in payload["classes"]:
+            # Inventories can have been generated on another machine. Resolve
+            # declaration locations against their recorded SDK, not our parent.
+            for declaration in [
+                cpp_class,
+                *cpp_class.get("fields", []),
+                *cpp_class.get("constructors", []),
+                *cpp_class.get("methods", []),
+            ]:
+                location = declaration.get("location", {})
+                if location.get("file") and payload.get("sdk_root"):
+                    try:
+                        location["file"] = str(
+                            Path(location["file"]).relative_to(payload["sdk_root"])
+                        )
+                    except ValueError:
+                        pass
             cpp_name = (
                 f"{cpp_class['namespace']}::{cpp_class['name']}"
                 if cpp_class.get("namespace")
@@ -441,8 +457,10 @@ def select_manifest_entry(
 
 def parse_stubs(
     binding_root: Path,
+    stub_root: Path | None = None,
 ) -> tuple[list[ModuleDoc], dict[str, Any], GenerationStats]:
-    stub_root = binding_root / "stubs" / "src" / "unitree_sdk2_cpp"
+    if stub_root is None:
+        stub_root = binding_root / "stubs" / "src" / "unitree_sdk2_cpp-stubs"
     manifest = json.loads((stub_root / "api_manifest.json").read_text(encoding="utf-8"))
     manifest_by_path: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for entry in manifest["entries"]:
@@ -686,9 +704,9 @@ def function_purpose(function: FunctionDoc) -> str:
     if function.name == "__ne__":
         return "按底层 IDL 消息内容比较两个对象是否不相等。"
     if function.name == "from_json":
-        return "计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。"
+        return "从 JSON 风格字典读取字段并更新当前 SDK 值对象。"
     if function.name == "to_json":
-        return "计划把当前 SDK 值对象写入 JSON 风格字典。"
+        return "把当前 SDK 值对象转换为 JSON 风格字典。"
     if function.name in {"init", "initialize"}:
         return "初始化当前 SDK 对象所需的底层通道或服务资源。"
     if function.name.startswith(("get_", "check_", "is_", "has_")):
@@ -877,6 +895,7 @@ def return_rows(function: FunctionDoc) -> list[tuple[str, str, str]]:
         function.returns == "int"
         and function.module.startswith(f"{PACKAGE_NAME}.robot")
         and function.name not in {"get_lease_id"}
+        and function.owner not in {"LeaseCache", "LeaseContext", "LeaseClient", "RequestFutureQueue"}
     ):
         return [
             (
@@ -1542,7 +1561,7 @@ def render_document(
             "4. 使用编辑器补全和类型检查确认实际调用签名。",
             "",
             "需要跨全部 API 自动检索时，优先读取打包在 stub 中的 "
-            "`unitree_sdk2_cpp/api_manifest.json`。",
+            "`unitree_sdk2_cpp-stubs/api_manifest.json`。",
         ]
     )
     return "\n".join(lines).rstrip() + "\n"

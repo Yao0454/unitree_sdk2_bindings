@@ -7,9 +7,12 @@ from pathlib import Path
 import pytest
 
 
-SDK_ROOT = Path(__file__).parents[2]
-SCANNER = SDK_ROOT / "unitree_sdk2_bindings" / "generator" / "scan_headers.py"
-sys.path.insert(0, str(SDK_ROOT / "unitree_sdk2_bindings" / "generator"))
+BINDINGS_ROOT = Path(__file__).parents[1]
+SCANNER = BINDINGS_ROOT / "generator" / "scan_headers.py"
+sys.path.insert(0, str(BINDINGS_ROOT / "generator"))
+from sdk_paths import find_sdk_root  # noqa: E402
+
+SDK_ROOT = find_sdk_root()
 from scan_headers import (  # noqa: E402
     _parameters,
     _headers_from_arguments,

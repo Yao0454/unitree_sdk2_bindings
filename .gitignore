@@ -9,6 +9,10 @@ dist/
 _skbuild/
 .DS_Store
 .obsidian/
+.venv/
+
+# Users clone the C++ SDK here; do not commit another Git repository.
+/thirdparty/unitree_sdk2/
 
 # LaTeX sources and build artifacts
 tmp/

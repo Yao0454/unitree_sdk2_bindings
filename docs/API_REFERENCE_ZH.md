@@ -66,4 +66,4 @@
 3. 查看具体成员的可用性和安全分类；
 4. 使用编辑器补全和类型检查确认实际调用签名。
 
-需要跨全部 API 自动检索时，优先读取打包在 stub 中的 `unitree_sdk2_cpp/api_manifest.json`。
+需要跨全部 API 自动检索时，优先读取打包在 stub 中的 `unitree_sdk2_cpp-stubs/api_manifest.json`。

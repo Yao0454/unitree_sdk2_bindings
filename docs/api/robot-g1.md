@@ -37,20 +37,20 @@ from unitree_sdk2_cpp.robot.g1 import bad_orientation, joint_vel_out_of_limit, a
 
 ### 类索引
 
-| 类                                                                             | 公开函数签名 |  属性 |     |
-| ----------------------------------------------------------------------------- | -----: | --: | --- |
-| [`InternalFsmMode`](#unitree-sdk2-cpp-robot-g1-internalfsmmode)               |      0 |   0 |     |
-| [`AgvClient`](#unitree-sdk2-cpp-robot-g1-agvclient)                           |      4 |   0 |     |
-| [`AudioClient`](#unitree-sdk2-cpp-robot-g1-audioclient)                       |      8 |   0 |     |
-| [`G1ArmActionClient`](#unitree-sdk2-cpp-robot-g1-g1armactionclient)           |     f6 |   0 |     |
-| [`JsonizeDataVecFloat`](#unitree-sdk2-cpp-robot-g1-jsonizedatavecfloat)       |      3 |   0 |     |
-| [`JsonizeVelocityCommand`](#unitree-sdk2-cpp-robot-g1-jsonizevelocitycommand) |      3 |   0 |     |
-| [`LedControlParameter`](#unitree-sdk2-cpp-robot-g1-ledcontrolparameter)       |      3 |   0 |     |
-| [`LocoClient`](#unitree-sdk2-cpp-robot-g1-lococlient)                         |     35 |   0 |     |
-| [`MoveParameter`](#unitree-sdk2-cpp-robot-g1-moveparameter)                   |      3 |   0 |     |
-| [`PlayStopParameter`](#unitree-sdk2-cpp-robot-g1-playstopparameter)           |      3 |   0 |     |
-| [`PlayStreamParameter`](#unitree-sdk2-cpp-robot-g1-playstreamparameter)       |      3 |   0 |     |
-| [`TtsMakerParameter`](#unitree-sdk2-cpp-robot-g1-ttsmakerparameter)           |      3 |   0 |     |
+| 类 | 公开函数签名 | 属性 |
+| --- | ---: | ---: |
+| [`InternalFsmMode`](#unitree-sdk2-cpp-robot-g1-internalfsmmode) | 0 | 0 |
+| [`AgvClient`](#unitree-sdk2-cpp-robot-g1-agvclient) | 4 | 0 |
+| [`AudioClient`](#unitree-sdk2-cpp-robot-g1-audioclient) | 8 | 0 |
+| [`G1ArmActionClient`](#unitree-sdk2-cpp-robot-g1-g1armactionclient) | 6 | 0 |
+| [`JsonizeDataVecFloat`](#unitree-sdk2-cpp-robot-g1-jsonizedatavecfloat) | 3 | 0 |
+| [`JsonizeVelocityCommand`](#unitree-sdk2-cpp-robot-g1-jsonizevelocitycommand) | 3 | 0 |
+| [`LedControlParameter`](#unitree-sdk2-cpp-robot-g1-ledcontrolparameter) | 3 | 0 |
+| [`LocoClient`](#unitree-sdk2-cpp-robot-g1-lococlient) | 35 | 0 |
+| [`MoveParameter`](#unitree-sdk2-cpp-robot-g1-moveparameter) | 3 | 0 |
+| [`PlayStopParameter`](#unitree-sdk2-cpp-robot-g1-playstopparameter) | 3 | 0 |
+| [`PlayStreamParameter`](#unitree-sdk2-cpp-robot-g1-playstreamparameter) | 3 | 0 |
+| [`TtsMakerParameter`](#unitree-sdk2-cpp-robot-g1-ttsmakerparameter) | 3 | 0 |
 
 <a id="unitree-sdk2-cpp-robot-g1-bad-orientation-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.bad_orientation`
@@ -1366,7 +1366,7 @@ value = JsonizeDataVecFloat()
 <a id="unitree-sdk2-cpp-robot-g1-jsonizedatavecfloat-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.JsonizeDataVecFloat.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1410,7 +1410,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-jsonizedatavecfloat-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.JsonizeDataVecFloat.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1522,7 +1522,7 @@ value = JsonizeVelocityCommand()
 <a id="unitree-sdk2-cpp-robot-g1-jsonizevelocitycommand-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.JsonizeVelocityCommand.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1566,7 +1566,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-jsonizevelocitycommand-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.JsonizeVelocityCommand.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1679,7 +1679,7 @@ value = LedControlParameter()
 <a id="unitree-sdk2-cpp-robot-g1-ledcontrolparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.LedControlParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1723,7 +1723,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-ledcontrolparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.LedControlParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3540,7 +3540,7 @@ value = MoveParameter()
 <a id="unitree-sdk2-cpp-robot-g1-moveparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.MoveParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3584,7 +3584,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-moveparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.MoveParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3695,7 +3695,7 @@ value = PlayStopParameter()
 <a id="unitree-sdk2-cpp-robot-g1-playstopparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.PlayStopParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3739,7 +3739,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-playstopparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.PlayStopParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3851,7 +3851,7 @@ value = PlayStreamParameter()
 <a id="unitree-sdk2-cpp-robot-g1-playstreamparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.PlayStreamParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3895,7 +3895,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-playstreamparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.PlayStreamParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4008,7 +4008,7 @@ value = TtsMakerParameter()
 <a id="unitree-sdk2-cpp-robot-g1-ttsmakerparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.TtsMakerParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4052,7 +4052,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-g1-ttsmakerparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.g1.TtsMakerParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 

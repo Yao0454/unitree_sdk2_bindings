@@ -111,7 +111,7 @@ value = ApplyLeaseData()
 <a id="unitree-sdk2-cpp-robot-applyleasedata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.ApplyLeaseData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -155,7 +155,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-applyleasedata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.ApplyLeaseData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -266,7 +266,7 @@ value = ApplyLeaseParameter()
 <a id="unitree-sdk2-cpp-robot-applyleaseparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.ApplyLeaseParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -310,7 +310,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-applyleaseparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.ApplyLeaseParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1749,7 +1749,7 @@ def get_last_modified(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 
@@ -1791,7 +1791,7 @@ def get_id(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 
@@ -2026,7 +2026,7 @@ def get_id(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 
@@ -2311,7 +2311,7 @@ def get_id(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 
@@ -2353,7 +2353,7 @@ def get_term(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 
@@ -3188,7 +3188,7 @@ def size(self) -> int
 
 | 位置 | 类型 | 含义 |
 | --- | --- | --- |
-| 返回值 | `int` | SDK 状态码；Unitree 示例通常以 `0` 表示成功，非零值需按具体服务定义解释。 |
+| 返回值 | `int` | 返回 `int`。更精确的业务含义见该方法用途、C++ 签名和目标型号协议。 |
 
 **对应 C++**
 

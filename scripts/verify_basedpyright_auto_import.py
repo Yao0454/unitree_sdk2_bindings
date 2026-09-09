@@ -24,24 +24,30 @@ def send_message(stream: BinaryIO, message: JsonObject) -> None:
 
 
 def read_message(stream: BinaryIO, timeout_s: float) -> JsonObject:
-    selector = selectors.DefaultSelector()
-    selector.register(stream, selectors.EVENT_READ)
-    if not selector.select(timeout_s):
-        raise TimeoutError("timed out waiting for BasedPyright")
+    # Popen uses unbuffered pipes below: select() must observe the same bytes
+    # that read() consumes, not miss messages prefetched by BufferedReader.
+    deadline = time.monotonic() + timeout_s
+    with selectors.DefaultSelector() as selector:
+        selector.register(stream, selectors.EVENT_READ)
 
-    headers: dict[str, str] = {}
-    while True:
-        line = stream.readline()
-        if not line:
-            raise RuntimeError("BasedPyright closed its output stream")
-        if line == b"\r\n":
-            break
-        name, value = line.decode().split(":", 1)
-        headers[name.lower()] = value.strip()
+        def read_bytes(count: int) -> bytes:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0 or not selector.select(remaining):
+                raise TimeoutError("timed out waiting for BasedPyright")
+            data = stream.read(count)
+            if not data:
+                raise RuntimeError("BasedPyright closed its output stream")
+            return data
 
-    length = int(headers["content-length"])
-    payload = stream.read(length)
-    return json.loads(payload)
+        header = bytearray()
+        while not header.endswith(b"\r\n\r\n"):
+            header.extend(read_bytes(1))
+        headers = dict(line.decode().split(":", 1) for line in header.split(b"\r\n") if line)
+        length = int(next(v for k, v in headers.items() if k.lower() == "content-length"))
+        payload = bytearray()
+        while len(payload) < length:
+            payload.extend(read_bytes(length - len(payload)))
+        return json.loads(payload)
 
 
 def configuration_for(section: str | None, python_path: Path) -> JsonObject:
@@ -125,6 +131,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--module", default="unitree_sdk2_cpp.robot.g1")
     parser.add_argument("--settle-seconds", type=float, default=10.0)
     parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--hover", action="store_true", help="Verify Chinese hover docs for Go2 move")
     return parser.parse_args()
 
 
@@ -138,6 +145,11 @@ def main() -> int:
     server = args.server.resolve()
     probe_uri = (project / "completion_probe.py").as_uri()
     prefix = args.symbol[:-3]
+    document = (
+        "from unitree_sdk2_cpp.robot.go2 import SportClient\n"
+        "client = SportClient()\nclient.move(0.1, 0.0, 0.0)\n"
+        if args.hover else prefix
+    )
 
     environment = os.environ.copy()
     environment["VIRTUAL_ENV"] = str(python_path.parent.parent)
@@ -149,6 +161,7 @@ def main() -> int:
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
+        bufsize=0,
     )
 
     try:
@@ -197,7 +210,7 @@ def main() -> int:
                         "uri": probe_uri,
                         "languageId": "python",
                         "version": 1,
-                        "text": prefix,
+                        "text": document,
                     }
                 },
             },
@@ -205,21 +218,37 @@ def main() -> int:
 
         # The language server acknowledges initialization before its background
         # workspace and interpreter indexes are ready for completion requests.
-        time.sleep(args.settle_seconds)
+        deadline = time.monotonic() + args.settle_seconds
+        assert process.stdout is not None
+        while time.monotonic() < deadline:
+            try:
+                message = read_message(process.stdout, deadline - time.monotonic())
+            except TimeoutError:
+                break
+            answer_server_request(process, message, python_path, args.verbose)
         send_message(
             process.stdin,
             {
                 "jsonrpc": "2.0",
                 "id": 2,
-                "method": "textDocument/completion",
+                "method": "textDocument/hover" if args.hover else "textDocument/completion",
                 "params": {
                     "textDocument": {"uri": probe_uri},
-                    "position": {"line": 0, "character": len(prefix)},
+                    "position": {"line": 2, "character": 9} if args.hover else {"line": 0, "character": len(prefix)},
                     "context": {"triggerKind": 1},
                 },
             },
         )
         response = wait_for_response(process, 2, python_path, args.verbose)
+        if "error" in response:
+            raise RuntimeError(response["error"])
+        if args.hover:
+            rendered = json.dumps(response.get("result"), ensure_ascii=False)
+            for expected in ("发送 Go2 高层速度指令", "Args:", "Returns:", "Examples:", "stop_move"):
+                if expected not in rendered:
+                    raise RuntimeError(f"hover missing {expected!r}: {rendered}")
+            print(rendered)
+            return 0
         result = response.get("result") or []
         items = result.get("items", []) if isinstance(result, dict) else result
         candidate = next(

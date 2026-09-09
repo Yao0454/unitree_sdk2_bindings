@@ -18,8 +18,7 @@ else()
   message(FATAL_ERROR "Unsupported architecture: ${CMAKE_SYSTEM_PROCESSOR}")
 endif()
 
-set(UNITREE_SDK_ROOT "${CMAKE_CURRENT_LIST_DIR}/.." CACHE PATH
-  "Path to the unitree_sdk2 source tree")
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/UnitreeSdk.cmake")
 
 find_package(Python REQUIRED COMPONENTS Interpreter Development.Module)
 find_package(pybind11 CONFIG REQUIRED)
@@ -179,22 +178,6 @@ if(UNITREE_REGENERATE_BINDINGS)
     "${UNITREE_ROBOT_READ_ONLY_BINDING}"
     "${UNITREE_ROBOT_READ_ONLY_REPORT}")
 endif()
-
-set(UNITREE_SDK_LIBRARY
-  "${UNITREE_SDK_ROOT}/lib/${UNITREE_ARCH}/libunitree_sdk2.a")
-set(UNITREE_DDS_LIBRARY
-  "${UNITREE_SDK_ROOT}/thirdparty/lib/${UNITREE_ARCH}/libddsc.so")
-set(UNITREE_DDSXX_LIBRARY
-  "${UNITREE_SDK_ROOT}/thirdparty/lib/${UNITREE_ARCH}/libddscxx.so")
-
-foreach(required_file IN ITEMS
-    "${UNITREE_SDK_LIBRARY}"
-    "${UNITREE_DDS_LIBRARY}"
-    "${UNITREE_DDSXX_LIBRARY}")
-  if(NOT EXISTS "${required_file}")
-    message(FATAL_ERROR "Required Unitree library not found: ${required_file}")
-  endif()
-endforeach()
 
 add_library(unitree_sdk2 STATIC IMPORTED GLOBAL)
 set_target_properties(unitree_sdk2 PROPERTIES

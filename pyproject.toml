@@ -6,11 +6,22 @@ build-backend = "scikit_build_core.build"
 name = "unitree-sdk2-cpp"
 version = "0.0.1"
 description = "Experimental pybind11 bindings for the Unitree SDK2 C++ API"
+readme = "README.md"
 requires-python = ">=3.10"
 
 [tool.scikit-build]
+minimum-version = "build-system.requires"
 cmake.build-type = "Release"
 wheel.packages = []
+# Include only SDK build inputs when an sdist is built after cloning thirdparty.
+# SDK Git history, examples and build outputs are deliberately not packaged.
+sdist.include = [
+  "thirdparty/unitree_sdk2/include/**",
+  "thirdparty/unitree_sdk2/lib/**",
+  "thirdparty/unitree_sdk2/thirdparty/include/**",
+  "thirdparty/unitree_sdk2/thirdparty/lib/**",
+  "thirdparty/unitree_sdk2/LICENSE",
+]
 
 [tool.pytest.ini_options]
 markers = [

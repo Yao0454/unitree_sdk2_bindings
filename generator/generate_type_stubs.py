@@ -8,6 +8,12 @@ import keyword
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
+try:
+    from .stub_sources import generate_source_companions
+    from .stub_help import enrich_stubs
+except ImportError:
+    from stub_sources import generate_source_companions
+    from stub_help import enrich_stubs
 from typing import Any
 
 
@@ -600,11 +606,8 @@ def generate(arguments: argparse.Namespace) -> dict[str, Any]:
     ]
 
     output = arguments.output
-    # PEP 561 requires a distribution named ``foo-stubs`` to install its
-    # declarations in a sibling package directory named ``foo-stubs``. Keeping
-    # them out of ``unitree_sdk2_cpp/`` is also essential here: the runtime is a
-    # top-level native extension, and a Python package directory of the same
-    # name would shadow that extension during import.
+    # PEP 561 declarations and discoverable source companions are separate.
+    # The companion root explicitly loads the existing top-level native .so.
     package = output / "unitree_sdk2_cpp-stubs"
     idl_python_names = {
         item["qualified_name"]: item["python_name"]
@@ -711,7 +714,8 @@ class ChannelSubscriber(Generic[MessageT]):
     idl_module_names = ["go2", "hg", "hg_doubleimu", "ros2"]
     write_text(
         package / "idl" / "__init__.pyi",
-        '"""DDS message namespaces."""',
+        '\n'.join(['"""DDS 消息类型；G1 使用 HG 消息别名。"""',
+                   *(f"from . import {name} as {name}" for name in ["g1", *idl_module_names])]),
     )
     manifest_entries: list[dict[str, Any]] = []
     for name, report in zip(idl_module_names, idl_reports, strict=True):
@@ -910,6 +914,9 @@ class ChannelSubscriber(Generic[MessageT]):
         available_strategies,
         manifest_entries,
     )
+    root_content += "\n" + "\n".join(
+        f"from . import {name} as {name}" for name in submodules
+    ) + "\n"
     write_text(package / "robot" / "__init__.pyi", root_content)
     for name in submodules:
         namespace = f"unitree::robot::{name}"
@@ -975,6 +982,8 @@ def lost_connection(subscriber: ChannelSubscriber[LowState], timeout_ms: int = 1
     (package / "api_manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
+    enrich_stubs(package, Path(__file__).resolve().parents[1])
+    generate_source_companions(package)
     return manifest
 
 

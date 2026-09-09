@@ -4,8 +4,12 @@
 
 本文对应以下本地构建产物：
 
+> 0.4.0 更新：普通安装 stub 后无需为本包配置额外搜索路径或关闭 Pyright 源码诊断。
+> 悬停提示已包含中文用途、参数、返回值和用法。安装步骤以 [stub README](../stubs/README.md)
+> 和 [独立构建说明](../README.md) 为准；编辑器仍需选择安装包的同一个 Python 环境。
+
 ```text
-unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 完成本文后，你将能：
@@ -142,7 +146,7 @@ cd unitree_sdk2_bindings
 确认 wheel 文件存在：
 
 ```bash
-ls dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+ls dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 你应该看到同名文件路径。
@@ -179,7 +183,7 @@ conda activate unitree-py310
 
 ```bash
 python -m pip install \
-  dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+  dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 检查安装结果：
@@ -192,7 +196,7 @@ python -m pip show unitree-sdk2-cpp-stubs
 
 ```text
 Name: unitree-sdk2-cpp-stubs
-Version: 0.3.0
+Version: 0.4.0
 ```
 
 ### 4. 安装一个类型检查器
@@ -280,7 +284,7 @@ error: Incompatible types in assignment
 文件：
 
 ```text
-dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 文件名各部分的含义：
@@ -288,7 +292,7 @@ dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
 | 部分 | 含义 |
 | --- | --- |
 | `unitree_sdk2_cpp_stubs` | Python 分发包名称 |
-| `0.3.0` | 签名包版本 |
+| `0.4.0` | 签名包版本 |
 | `py3` | 适用于 Python 3 的类型信息 |
 | `none-any` | 不依赖操作系统或 CPU 架构 |
 
@@ -438,7 +442,7 @@ cd unitree_sdk2_bindings
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install \
-  dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+  dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 python -m pip install mypy
 ```
 
@@ -552,7 +556,7 @@ python -m pip install -e . \
 
 ```bash
 python -m pip install \
-  dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+  dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 #### 7. 先做不接触机器人的导入检查
@@ -2873,13 +2877,13 @@ ls dist
 如果你在仓库根目录，wheel 的相对路径是：
 
 ```text
-unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 如果你已经进入 `unitree_sdk2_bindings`，相对路径才是：
 
 ```text
-dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 ### 14. 签名和实际运行时看起来不一致
@@ -2891,7 +2895,7 @@ python -m pip show unitree-sdk2-cpp-stubs
 python -m pip show unitree-sdk2-cpp
 ```
 
-当前 stub `0.3.0` 描述的是当前仓库生成时的接口快照。未来运行时版本更新后，应同时重新生成并发布匹配的 stub，不要长期混用不同修订。
+当前 stub `0.4.0` 描述的是当前仓库生成时的接口快照。未来运行时版本更新后，应同时重新生成并发布匹配的 stub，不要长期混用不同修订。
 
 ---
 
@@ -2977,7 +2981,7 @@ API 允许创建多个实例。每个实例应保存在变量中，并在结束�
 
 ```bash
 shasum -a 256 \
-  unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+  unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 当前预期 SHA-256：
@@ -2990,7 +2994,7 @@ Linux 上也可以用：
 
 ```bash
 sha256sum \
-  unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.3.0-py3-none-any.whl
+  unitree_sdk2_bindings/dist/unitree_sdk2_cpp_stubs-0.4.0-py3-none-any.whl
 ```
 
 ---
@@ -3445,13 +3449,13 @@ TtsMakerParameter
 
 | 项目 | 值 |
 | --- | --- |
-| 文档日期 | 2026-08-28 |
+| 文档日期 | 2026-09-09 |
 | Stub 分发包 | `unitree-sdk2-cpp-stubs` |
-| Stub 版本 | `0.3.0` |
+| Stub 版本 | `0.4.0` |
 | Python 要求 | `>=3.10` |
 | Wheel 标签 | `py3-none-any` |
 | Manifest schema | `1` |
-| Wheel SHA-256 | `126c3e43656de48a69f946a8d9faea87d396c983f91e4bfee48762144fac76ec` |
+| Wheel SHA-256 | 请对实际安装的 wheel 执行 `shasum -a 256 文件名.whl`；本地重建产物可能不同 |
 
 ### 签名覆盖统计
 

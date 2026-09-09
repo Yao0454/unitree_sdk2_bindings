@@ -4,15 +4,15 @@ import sys
 from pathlib import Path
 
 
-SDK_ROOT = Path(__file__).parents[2]
-SCANNER = SDK_ROOT / "unitree_sdk2_bindings" / "generator" / "scan_headers.py"
-GENERATOR = (
-    SDK_ROOT / "unitree_sdk2_bindings" / "generator" / "generate_bindings.py"
-)
-CHANNEL_GENERATOR = (
-    SDK_ROOT / "unitree_sdk2_bindings" / "generator" / "generate_channel_registry.py"
-)
-OVERRIDES = SDK_ROOT / "unitree_sdk2_bindings" / "generator" / "overrides.yaml"
+BINDINGS_ROOT = Path(__file__).parents[1]
+sys.path.insert(0, str(BINDINGS_ROOT / "generator"))
+from sdk_paths import find_sdk_root  # noqa: E402
+
+SDK_ROOT = find_sdk_root()
+SCANNER = BINDINGS_ROOT / "generator" / "scan_headers.py"
+GENERATOR = BINDINGS_ROOT / "generator" / "generate_bindings.py"
+CHANNEL_GENERATOR = BINDINGS_ROOT / "generator" / "generate_channel_registry.py"
+OVERRIDES = BINDINGS_ROOT / "generator" / "overrides.yaml"
 
 
 def test_simple_idl_generator_uses_properties_and_reports_coverage(

@@ -530,7 +530,7 @@ value = ConfigDelParameter()
 <a id="unitree-sdk2-cpp-robot-go2-configdelparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigDelParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -574,7 +574,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configdelparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigDelParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -685,7 +685,7 @@ value = ConfigGetData()
 <a id="unitree-sdk2-cpp-robot-go2-configgetdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigGetData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -729,7 +729,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configgetdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigGetData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -840,7 +840,7 @@ value = ConfigGetParameter()
 <a id="unitree-sdk2-cpp-robot-go2-configgetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigGetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -884,7 +884,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configgetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigGetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1065,7 +1065,7 @@ value = ConfigMetaData()
 <a id="unitree-sdk2-cpp-robot-go2-configmetadata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigMetaData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1109,7 +1109,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configmetadata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigMetaData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1220,7 +1220,7 @@ value = ConfigMetaParameter()
 <a id="unitree-sdk2-cpp-robot-go2-configmetaparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigMetaParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1264,7 +1264,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configmetaparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigMetaParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1376,7 +1376,7 @@ value = ConfigSetParameter()
 <a id="unitree-sdk2-cpp-robot-go2-configsetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigSetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1420,7 +1420,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-configsetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ConfigSetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1532,7 +1532,7 @@ value = JsonizeCommObjInt()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizecommobjint-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeCommObjInt.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1576,7 +1576,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizecommobjint-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeCommObjInt.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1690,7 +1690,7 @@ value = JsonizeConfigMeta()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizeconfigmeta-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeConfigMeta.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1734,7 +1734,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizeconfigmeta-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeConfigMeta.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1845,7 +1845,7 @@ value = JsonizeDataBool()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatabool-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataBool.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1889,7 +1889,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatabool-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataBool.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2000,7 +2000,7 @@ value = JsonizeDataDouble()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatadouble-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataDouble.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2044,7 +2044,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatadouble-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataDouble.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2155,7 +2155,7 @@ value = JsonizeDataFloat()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatafloat-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataFloat.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2199,7 +2199,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatafloat-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataFloat.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2310,7 +2310,7 @@ value = JsonizeDataInt()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedataint-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataInt.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2354,7 +2354,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedataint-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataInt.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2465,7 +2465,7 @@ value = JsonizeDataString()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatastring-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataString.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2509,7 +2509,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizedatastring-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeDataString.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2620,7 +2620,7 @@ value = JsonizeFlagBool()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizeflagbool-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeFlagBool.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2664,7 +2664,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizeflagbool-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeFlagBool.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2781,7 +2781,7 @@ value = JsonizePathPoint()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizepathpoint-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizePathPoint.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2825,7 +2825,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizepathpoint-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizePathPoint.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2939,7 +2939,7 @@ value = JsonizeQuat()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizequat-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeQuat.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2983,7 +2983,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizequat-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeQuat.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3096,7 +3096,7 @@ value = JsonizeVec3()
 <a id="unitree-sdk2-cpp-robot-go2-jsonizevec3-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeVec3.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3140,7 +3140,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-jsonizevec3-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.JsonizeVec3.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3658,7 +3658,7 @@ value = ObstaclesAvoidMoveParameter()
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidmoveparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidMoveParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3702,7 +3702,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidmoveparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidMoveParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3813,7 +3813,7 @@ value = ObstaclesAvoidRemoteCommandSource()
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidremotecommandsource-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidRemoteCommandSource.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -3857,7 +3857,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidremotecommandsource-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidRemoteCommandSource.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -3968,7 +3968,7 @@ value = ObstaclesAvoidSwitchGetData()
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidswitchgetdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidSwitchGetData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4012,7 +4012,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidswitchgetdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidSwitchGetData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4123,7 +4123,7 @@ value = ObstaclesAvoidSwitchSetParameter()
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidswitchsetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidSwitchSetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4167,7 +4167,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-obstaclesavoidswitchsetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ObstaclesAvoidSwitchSetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4601,7 +4601,7 @@ value = ServiceStateData()
 <a id="unitree-sdk2-cpp-robot-go2-servicestatedata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceStateData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4645,7 +4645,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-servicestatedata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceStateData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4757,7 +4757,7 @@ value = ServiceSwitchData()
 <a id="unitree-sdk2-cpp-robot-go2-serviceswitchdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceSwitchData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4801,7 +4801,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-serviceswitchdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceSwitchData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -4913,7 +4913,7 @@ value = ServiceSwitchParameter()
 <a id="unitree-sdk2-cpp-robot-go2-serviceswitchparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceSwitchParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -4957,7 +4957,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-serviceswitchparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.ServiceSwitchParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -5069,7 +5069,7 @@ value = SetReportFreqParameter()
 <a id="unitree-sdk2-cpp-robot-go2-setreportfreqparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.SetReportFreqParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -5113,7 +5113,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-setreportfreqparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.SetReportFreqParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -7443,7 +7443,7 @@ value = UtrackSwitchGetData()
 <a id="unitree-sdk2-cpp-robot-go2-utrackswitchgetdata-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.UtrackSwitchGetData.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -7487,7 +7487,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-utrackswitchgetdata-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.UtrackSwitchGetData.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -7598,7 +7598,7 @@ value = UtrackSwitchSetParameter()
 <a id="unitree-sdk2-cpp-robot-go2-utrackswitchsetparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.UtrackSwitchSetParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -7642,7 +7642,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-go2-utrackswitchsetparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.go2.UtrackSwitchSetParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 

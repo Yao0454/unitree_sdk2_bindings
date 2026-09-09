@@ -13,7 +13,6 @@ from unitree_sdk2_cpp import channel
 from unitree_sdk2_cpp.idl import g1
 from unitree_sdk2_cpp.robot import g1 as g1_robot
 
-
 logger = logging.getLogger(__name__)
 LOWSTATE_TOPIC = "rt/lowstate"
 

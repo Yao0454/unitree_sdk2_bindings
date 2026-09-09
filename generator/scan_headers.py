@@ -10,6 +10,11 @@ from pathlib import Path
 from typing import Any, Iterable
 
 try:
+    from .sdk_paths import find_sdk_root
+except ImportError:
+    from sdk_paths import find_sdk_root
+
+try:
     from .model import (
         ApiInventory,
         CppBase,
@@ -542,11 +547,15 @@ def main() -> int:
         description="Scan Unitree SDK2 C++ headers with Clang"
     )
     parser.add_argument("headers", nargs="*", help="Headers relative to the SDK root")
-    parser.add_argument("--sdk-root", type=Path, default=Path(__file__).parents[2])
+    parser.add_argument("--sdk-root", type=Path, help="SDK source root; defaults to thirdparty/unitree_sdk2")
     parser.add_argument("--clang", default="clang++")
     parser.add_argument("--compile-arg", action="append", default=[])
     parser.add_argument("--output", type=Path)
     arguments = parser.parse_args()
+    try:
+        arguments.sdk_root = find_sdk_root(arguments.sdk_root)
+    except FileNotFoundError as error:
+        parser.error(str(error))
 
     headers = _headers_from_arguments(arguments.sdk_root, arguments.headers)
     inventory = scan(

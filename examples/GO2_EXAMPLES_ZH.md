@@ -1,5 +1,6 @@
 # Go2 Python 示例
 
+首次使用请先完成 [README 中的独立克隆、编译和安装](../README.md)。
 这些脚本使用本仓库的 `unitree_sdk2_cpp` binding。需要在支持的 Linux
 环境安装原生包；仅安装 stubs 只能获得类型提示，不能连接机器人。
 以下命令从 `unitree_sdk2_bindings` 目录运行，把 `eth0` 换成连接 Go2 的网卡名。
@@ -68,6 +69,61 @@ python examples/go2_sport.py -n eth0 move --vyaw 0.2 --seconds 1
 正常结束、SDK 错误或 Ctrl+C 中断移动时，`finally` 都会尝试 `stop_move()`，
 随后释放 DDS。停止调用失败会报错；断网、进程被强制杀死等情况下，不能靠此脚本保证停止。
 起立/趴下调用返回成功仅表示请求被接受，不表示物理动作已经完成。
+
+## 5. 读取一条电池、IMU 和关节状态
+
+```bash
+python examples/go2_lowstate_once.py -n eth0
+```
+
+订阅 `rt/lowstate`，等待第一条消息后退出。输出 JSON，包含 tick、电池电量百分比、
+RPY 姿态，以及前 12 个腿部关节的位置、速度、估计力矩、温度。
+消息复制为 `Snapshot` / `JointState` 后交给主线程，回调不进行文件写入。
+这里演示字段读取，没有把 CRC 校验或这些数值作为安全控制判断。
+未收到消息会在 5 秒后超时，不会为了获取状态自动关闭运动服务。
+
+## 6. 获取一张相机照片
+
+```bash
+python examples/go2_camera_snapshot.py -n eth0 -o go2_photo.jpg
+```
+
+`VideoClient.get_image_sample()` 返回 `(错误码, list[int])`，列表是编码后的图片字节。
+示例用 `bytes(data)` 转换并保存 JPEG，不需要 OpenCV 或 NumPy。
+相机服务须受设备固件支持；空数据、非 JPEG 数据、RPC 失败都会报错。
+输出路径相对当前工作目录，父目录需已存在，已有文件不会被覆盖。
+
+## 7. 设置音量或亮度并回读
+
+```bash
+python examples/go2_vui_set.py -n eth0 volume 3
+python examples/go2_vui_set.py -n eth0 brightness 5
+```
+
+示例接受 0 到 10 的整数等级，最终支持范围以设备固件为准。
+它会修改对应设置，退出时不恢复原值；只想查询请运行 `go2_vui_status.py`。
+setter 返回 `int` 错误码，getter 返回 `(错误码, 实际值)`。如果设置成功但回读失败，
+错误提示会明确说明设置可能已经生效，不会自动重试写入。
+
+## 8. 不联网，学习构造消息和修改数组
+
+```bash
+python examples/go2_build_lowcmd.py
+```
+
+示例创建 20 个 `MotorCmd` 放进 `LowCmd.motor_cmd`，再把第 0 个关节目标位置改为 0.1 rad。
+Go2 的 DDS 消息有 20 个槽位，腿部关节使用前 12 个，不要把固定长度数组缩减为 12。
+业务参数用 `JointSettings` 表示，再转换成 SDK 消息。
+
+```python
+motors = command.motor_cmd
+motors[0].q = 0.1
+command.motor_cmd = motors
+```
+
+最后一步回写不可省略，因为列表和嵌套对象从 binding 返回时是副本。
+此示例未准备低层发送需要的消息头、模式和 CRC，不是低层运动控制程序，也不会发布 `rt/lowcmd`。
+仍需要 Linux 原生扩展来构造 C++ 消息对象，但不需要连接机器人。
 
 ## 从示例开始写自己的程序
 

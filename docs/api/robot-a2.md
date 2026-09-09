@@ -499,7 +499,7 @@ value = LedControlParameter()
 <a id="unitree-sdk2-cpp-robot-a2-ledcontrolparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.LedControlParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -543,7 +543,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-a2-ledcontrolparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.LedControlParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -724,7 +724,7 @@ value = PlayStopParameter()
 <a id="unitree-sdk2-cpp-robot-a2-playstopparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PlayStopParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -768,7 +768,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-a2-playstopparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PlayStopParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -880,7 +880,7 @@ value = PlayStreamParameter()
 <a id="unitree-sdk2-cpp-robot-a2-playstreamparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PlayStreamParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -924,7 +924,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-a2-playstreamparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PlayStreamParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -1038,7 +1038,7 @@ value = PoseVec4()
 <a id="unitree-sdk2-cpp-robot-a2-posevec4-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PoseVec4.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -1082,7 +1082,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-a2-posevec4-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.PoseVec4.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
@@ -2369,7 +2369,7 @@ value = TtsMakerParameter()
 <a id="unitree-sdk2-cpp-robot-a2-ttsmakerparameter-from-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.TtsMakerParameter.from_json`
 
-计划从 JSON 风格字典读取字段并更新当前 SDK 值对象。
+从 JSON 风格字典读取字段并更新当前 SDK 值对象。
 
 **签名**
 
@@ -2413,7 +2413,7 @@ obj.from_json(value=value)
 <a id="unitree-sdk2-cpp-robot-a2-ttsmakerparameter-to-json-1"></a>
 #### `unitree_sdk2_cpp.robot.a2.TtsMakerParameter.to_json`
 
-计划把当前 SDK 值对象写入 JSON 风格字典。
+把当前 SDK 值对象转换为 JSON 风格字典。
 
 **签名**
 
